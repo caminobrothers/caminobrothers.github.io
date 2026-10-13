@@ -402,6 +402,13 @@ h1, h2, h3 {
   height: auto;
   border-bottom: 3px double var(--gold);
 }
+.card .price {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--crimson);
+  margin: 0.4rem 0 0.5rem;
+}
 
 /* ---------- shop promo (homepage) ---------- */
 .shop-promo {
