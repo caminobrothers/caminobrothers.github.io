@@ -450,6 +450,50 @@ h1, h2, h3 {
 }
 .shop-promo .btn:hover { filter: brightness(1.1); }
 
+/* ---------- ebook banner (shop) ---------- */
+.ebook-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  background: linear-gradient(to right, var(--iron-soft), var(--iron));
+  color: var(--cream);
+  padding: 0.7rem 1.1rem;
+  box-shadow: 3px 3px 0 var(--shadow);
+}
+.ebook-banner img {
+  width: 96px;
+  height: 64px;
+  object-fit: cover;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  flex: none;
+}
+.ebook-banner .eb-text { flex: 1 1 auto; min-width: 0; }
+.ebook-banner h2 {
+  font-size: 1.12rem;
+  color: var(--gold-light);
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+.ebook-banner p { margin: 0.15rem 0 0; font-size: 0.92rem; }
+.ebook-banner .eb-badge {
+  flex: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: var(--crimson);
+  color: #fff;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  padding: 0.35rem 0.7rem;
+}
+@media (max-width: 560px) {
+  .ebook-banner { flex-wrap: wrap; }
+  .ebook-banner img { width: 72px; height: 48px; }
+}
+
 /* ---------- gallery ---------- */
 .gallery {
   list-style: none;
