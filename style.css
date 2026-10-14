@@ -169,6 +169,9 @@ main { padding-bottom: 3rem; }
   height: 100%;
   object-fit: cover;
 }
+.hero img.hero-photo.focal-top {
+  object-position: 50% 10%;
+}
 /* dark gradient for title legibility */
 .hero::after {
   content: "";
