@@ -51,6 +51,14 @@
     .quote-card p { font-family: "Cinzel", serif; font-size: 1.15rem; margin: 0 0 0.4rem; }
     .quote-card span { color: var(--ink-soft); font-size: 0.92rem; }
     @media (max-width: 760px) { .video-row { grid-template-columns: 1fr; } }
+
+    /* Preview 3b: nav spread full-width inside the banner (desktop) */
+    @media (min-width: 921px) {
+      .header-inner { max-width: none; flex-wrap: wrap; padding-left: 2rem; padding-right: 2rem; }
+      .main-nav { order: 3; flex: 1 1 100%; margin-left: 0; }
+      .main-nav ul { justify-content: space-between; flex-wrap: nowrap; }
+      .main-nav a { white-space: nowrap; }
+    }
   </style>
 </head>
 <body>
@@ -156,7 +164,7 @@
         </figure>
         <aside class="quote-card">
           <p>&ldquo;Make sure the fins stay wet&hellip; Brook Trout.&rdquo;</p>
-          <span>The running gag from the first camino's last night — still going strong, eight caminos later.</span>
+          <span>An inside joke from late in the first camino — still going strong, eight caminos later.</span>
         </aside>
       </div>
 
