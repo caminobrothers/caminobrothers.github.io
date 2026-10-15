@@ -172,6 +172,9 @@ main { padding-bottom: 3rem; }
 .hero img.hero-photo.focal-top {
   object-position: 50% 10%;
 }
+.hero img.hero-photo.focal-mid {
+  object-position: 50% 55%;
+}
 /* dark gradient for title legibility */
 .hero::after {
   content: "";
