@@ -135,6 +135,18 @@
     }
     .lead-left .welcome { text-align: left; margin: 1.1rem 0 0; font-size: 1.04rem; max-width: none; }
   </style>
+
+  <style>
+    /* Homepage preview v3: original card grid under the lead */
+    .next-card { background: var(--cream); border: 1px solid var(--gold); border-left: 4px solid var(--crimson); border-radius: 4px; padding: 1rem 1.2rem; box-shadow: 2px 2px 0 var(--shadow); margin-top: 1.2rem; }
+    .next-card .next-eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem; color: var(--crimson); margin: 0 0 0.3rem; }
+    .next-card h3 { font-family: "Cinzel", serif; margin: 0 0 0.4rem; font-size: 1.25rem; }
+    .next-card p { margin: 0 0 0.8rem; color: var(--ink-soft); }
+  </style>
+
+  <style>
+    .lead-right .welcome { text-align: left; margin: 0; max-width: none; font-size: 1.06rem; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -177,11 +189,11 @@
       </ul>
 
       <div class="lead">
-        <div class="lead-left">
           <figure class="lead-photo">
             <img src="photos/camino1/camino1-03.jpg" alt="The three Camino Brothers with backpacks, posing on a wooded trail in Portugal">
             <figcaption>On the trail in Portugal — the first camino, 2019</figcaption>
           </figure>
+        <div class="lead-right">
           <p class="welcome">
         Buen camino, and welcome. We are Nicki, Mike and Dennis, and since
         2019 we've walked eight caminos across Spain, Portugal, Germany and
@@ -190,23 +202,108 @@
         This site documents each one: the routes, the dates, the stories,
         and the photos.
       </p>
-        </div>
-        <div class="lead-side">
-          <h2 class="section-title">The Caminos</h2>
-        <ul class="camino-list">
-          <li><a href="camino-1.html"><span class="cl-head"><strong>Portuguese (2019)</strong><span class="cl-dates">Sep 29 – Oct 12, 2019</span></span><span class="cl-desc"><img class="flag" src="photos/flags/pt.png" alt=""> <img class="flag" src="photos/flags/es.png" alt=""> Porto &rarr; Santiago &middot; 240 km — where it all began.</span></a></li>
-          <li><a href="camino-2.html"><span class="cl-head"><strong>Francés (2021)</strong><span class="cl-dates">Oct 3 – Oct 21, 2021</span></span><span class="cl-desc"><img class="flag" src="photos/flags/es.png" alt=""> León &rarr; Finisterre &middot; 413 km — the reunion after Covid; Mike and Nicki walked.</span></a></li>
-          <li><a href="camino-3.html"><span class="cl-head"><strong>Rheinsteig (2022)</strong><span class="cl-dates">Aug 5 – Aug 19, 2022</span></span><span class="cl-desc"><img class="flag" src="photos/flags/de.png" alt=""> Biebrich Castle &rarr; Sayn &middot; 195 km along the Rhine — Dennis is back, all three together.</span></a></li>
-          <li><a href="camino-4.html"><span class="cl-head"><strong>Portuguese (2023)</strong><span class="cl-dates">May 5 – May 19, 2023</span></span><span class="cl-desc"><img class="flag" src="photos/flags/pt.png" alt=""> <img class="flag" src="photos/flags/es.png" alt=""> Porto &rarr; Finisterre via the Spiritual Variant &middot; 340 km — and a surprise visit from Mike's daughter.</span></a></li>
-          <li><a href="camino-5.html"><span class="cl-head"><strong>Madeira (2024)</strong><span class="cl-dates">May 8 – May 17, 2024</span></span><span class="cl-desc"><img class="flag" src="photos/flags/pt.png" alt=""> One base in Funchal, a new levada walk every day — the island week.</span></a></li>
-          <li><a href="camino-6.html"><span class="cl-head"><strong>Jakobsweg (2024)</strong><span class="cl-dates">Oct 11 – Oct 21, 2024</span></span><span class="cl-desc"><img class="flag" src="photos/flags/de.png" alt=""> <img class="flag" src="photos/flags/at.png" alt=""> Munich &rarr; Innsbruck &middot; 155 km — three pilgrim trails stitched into one.</span></a></li>
-          <li><a href="camino-7.html"><span class="cl-head"><strong>Norte / Francés (2025)</strong><span class="cl-dates">Jul 10 – Jul 24, 2025</span></span><span class="cl-desc"><img class="flag" src="photos/flags/fr.png" alt=""> <img class="flag" src="photos/flags/es.png" alt=""> Irun &rarr; Santiago — two trails, one summer; Mike and Nicki.</span></a></li>
-          <li><a href="camino-8.html"><span class="cl-head"><strong>Tyrol (2026)</strong><span class="cl-dates">Jun 5 – Jun 19, 2026</span></span><span class="cl-desc"><img class="flag" src="photos/flags/at.png" alt=""> <img class="flag" src="photos/flags/de.png" alt=""> Salzburg &rarr; Munich through Tyrol and the Allgäu — the hardest ever.</span></a></li>
-          <li><a href="camino-9.html"><span class="cl-head"><strong>Coming Soon</strong><span class="cl-dates">Sep 28 – Oct 18, 2027</span></span><span class="cl-desc"> Camino 9: the Camino Francés — three weeks on the classic pilgrim road.</span></a></li>
-        </ul>
+          <aside class="next-card">
+            <p class="next-eyebrow">Next adventure</p>
+            <h3>Camino 9: The Camino Franc&eacute;s</h3>
+            <p>Sep 28 – Oct 18, 2027 &middot; Three weeks on the classic pilgrim road — all three brothers.</p>
+            <a class="btn" href="camino-9.html">See what's next &rarr;</a>
+          </aside>
         </div>
       </div>
 
+
+
+      <h2 class="section-title">The Caminos</h2>
+      <ul class="card-grid">
+        <li class="card">
+          <a class="card-link" href="camino-1.html">
+            <div class="card-top">
+              <h3>Camino: Portuguese (2019)</h3>
+              <span class="card-sub">Sep 29 – Oct 12, 2019</span>
+            </div>
+            <div class="card-body">
+              <p><img class="flag" src="photos/flags/pt.png" alt="">Portugal &middot; <img class="flag" src="photos/flags/es.png" alt="">Spain<br>The Portuguese Way from Porto to Santiago de Compostela — 240&nbsp;km. Where it all began.</p>
+            </div>
+            <span class="card-cta">View Camino &rarr;</span>
+          </a>
+        </li>
+        <li class="card">
+          <a class="card-link" href="camino-2.html">
+            <div class="card-top">
+              <h3>Camino: Francés (2021)</h3>
+              <span class="card-sub">Oct 3 – Oct 21, 2021</span>
+            </div>
+            <div class="card-body">
+              <p><img class="flag" src="photos/flags/es.png" alt="">Spain<br>The French Way from León to Finisterre — 413&nbsp;km. The reunion camino after two years of Covid: just Mike and Nicki on the trail, with Dennis waiting at the end in Germany.</p>
+            </div>
+            <span class="card-cta">View Camino &rarr;</span>
+          </a>
+        </li>
+        <li class="card">
+          <a class="card-link" href="camino-3.html">
+            <div class="card-top">
+              <h3>Camino: Rheinsteig (2022)</h3>
+              <span class="card-sub">Aug 5 – Aug 19, 2022</span>
+            </div>
+            <div class="card-body">
+              <p><img class="flag" src="photos/flags/de.png" alt="">Germany<br>The Rhine Trail from Biebrich Castle to Sayn — 195&nbsp;km along the Rhine. Dennis is back: all three brothers together, starting at Dennis's house.</p>
+            </div>
+            <span class="card-cta">View Camino &rarr;</span>
+          </a>
+        </li>
+        <li class="card">
+          <a class="card-link" href="camino-4.html">
+            <div class="card-top">
+              <h3>Camino: Portuguese (2023)</h3>
+              <span class="card-sub">May 5 – May 19, 2023</span>
+            </div>
+            <div class="card-body">
+              <p><img class="flag" src="photos/flags/pt.png" alt="">Portugal &middot; <img class="flag" src="photos/flags/es.png" alt="">Spain<br>The Portuguese Way again — this time the Spiritual Variant, and on past Santiago to Finisterre. 340&nbsp;km, a surprise visit from Mike's daughter, and a return to the bar where it all began.</p>
+            </div>
+            <span class="card-cta">View Camino &rarr;</span>
+          </a>
+        </li>
+        <li class="card">
+          <a class="card-link" href="camino-5.html">
+            <div class="card-top">
+              <h3>Camino: Madeira (2024)</h3>
+              <span class="card-sub">May 8 – May 17, 2024</span>
+            </div>
+            <div class="card-body"><p><img class="flag" src="photos/flags/pt.png" alt="">Portugal<br>The island week — one base in Funchal, a rental car, and a new levada walk every day. The brothers' first camino that wasn't point to point.</p></div>
+            <span class="card-cta">Open page &rarr;</span>
+          </a>
+        </li>
+        <li class="card">
+          <a class="card-link" href="camino-6.html">
+            <div class="card-top">
+              <h3>Camino: Jakobsweg (2024)</h3>
+              <span class="card-sub">Oct 11 – Oct 21, 2024</span>
+            </div>
+            <div class="card-body"><p><img class="flag" src="photos/flags/at.png" alt="Austria" title="Austria"> <img class="flag" src="photos/flags/de.png" alt="Germany" title="Germany"> Salzburg to Munich through Tyrol and the Allg&auml;u — the hardest camino yet, by their own verdict. Dennis joined for the first week.</p></div>
+            <span class="card-cta">Open page &rarr;</span>
+          </a>
+        </li>
+        <li class="card">
+          <a class="card-link" href="camino-7.html">
+            <div class="card-top">
+              <h3>Camino: Norte / Francés (2025)</h3>
+              <span class="card-sub">Jul 10 – Jul 24, 2025</span>
+            </div>
+            <div class="card-body"><p><img class="flag" src="photos/flags/fr.png" alt="France" title="France"> <img class="flag" src="photos/flags/es.png" alt="Spain" title="Spain"> Two trails, one summer — the Camino del Norte from Irun, then the Franc&eacute;s from Ponferrada to Santiago. Mike and Nicki, with one night in a tent along the way.</p></div>
+            <span class="card-cta">Open page &rarr;</span>
+          </a>
+        </li>
+        <li class="card">
+          <a class="card-link" href="camino-8.html">
+            <div class="card-top">
+              <h3>Camino: Tyrol (2026)</h3>
+              <span class="card-sub">Jun 5 – Jun 19, 2026</span>
+            </div>
+            <div class="card-body"><p><img class="flag" src="photos/flags/at.png" alt="Austria" title="Austria"> <img class="flag" src="photos/flags/de.png" alt="Germany" title="Germany"> Salzburg to Munich through Tyrol and the Allg&auml;u — the hardest camino yet, by their own verdict. Dennis joined for the first week.</p></div>
+            <span class="card-cta">Open page &rarr;</span>
+          </a>
+        </li>
+      </ul>
 
       <div class="ornament" aria-hidden="true"><svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg></div>
 
