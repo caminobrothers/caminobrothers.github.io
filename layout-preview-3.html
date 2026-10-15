@@ -81,6 +81,17 @@
       .lead .story { overflow: hidden; }
       .lead-photo { height: 100%; }
     }
+
+    /* Preview 3f: wider, shorter lead — fits one screen */
+    .preview-title { margin-top: 1rem; }
+    .preview-title h1 { font-size: 2.05rem; }
+    .facts-band { margin-bottom: 1rem; }
+    @media (min-width: 761px) {
+      .lead { height: 390px; width: min(1240px, 96vw); margin-left: 50%; transform: translateX(-50%); }
+    }
+    @media (max-width: 760px) {
+      .lead-photo { height: 330px; }
+    }
   </style>
 </head>
 <body>
