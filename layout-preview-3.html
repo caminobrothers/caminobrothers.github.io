@@ -59,6 +59,15 @@
       .main-nav ul { justify-content: space-between; flex-wrap: nowrap; }
       .main-nav a { white-space: nowrap; }
     }
+
+    /* Preview 3c: facts on top, photo & story equal height */
+    .facts-band { margin-bottom: 1.4rem; }
+    .lead { align-items: stretch; margin-top: 0; }
+    .lead-photo { min-height: 340px; }
+    .lead-photo img { position: absolute; top: 8px; right: 8px; bottom: 8px; left: 8px; width: calc(100% - 16px); height: calc(100% - 16px); max-height: none; object-fit: cover; object-position: 50% 30%; }
+    @media (max-width: 760px) {
+      .lead-photo { height: 400px; min-height: 0; }
+    }
   </style>
 </head>
 <body>
@@ -71,15 +80,15 @@
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="camino-1.html" aria-current="page">Camino: Portuguese (2019)</a></li>
-          <li><a href="camino-2.html">Camino: Francés (2021)</a></li>
-          <li><a href="camino-3.html">Camino: Rheinsteig (2022)</a></li>
-          <li><a href="camino-4.html">Camino: Portuguese (2023)</a></li>
-          <li><a href="camino-5.html">Camino: Madeira (2024)</a></li>
-          <li><a href="camino-6.html">Camino: Jakobsweg (2024)</a></li>
-          <li><a href="camino-7.html">Camino: Norte / Francés (2025)</a></li>
-          <li><a href="camino-8.html">Camino: Tyrol (2026)</a></li>
-          <li><a href="camino-9.html">Camino 9: Coming Soon</a></li>
+          <li><a href="camino-1.html" aria-current="page">Portuguese (2019)</a></li>
+          <li><a href="camino-2.html">Francés (2021)</a></li>
+          <li><a href="camino-3.html">Rheinsteig (2022)</a></li>
+          <li><a href="camino-4.html">Portuguese (2023)</a></li>
+          <li><a href="camino-5.html">Madeira (2024)</a></li>
+          <li><a href="camino-6.html">Jakobsweg (2024)</a></li>
+          <li><a href="camino-7.html">Norte / Francés (2025)</a></li>
+          <li><a href="camino-8.html">Tyrol (2026)</a></li>
+          <li><a href="camino-9.html">Coming Soon</a></li>
           <li><a href="shop.html">Shop</a></li>
         </ul>
       </nav>
@@ -93,6 +102,13 @@
         <h1>The Portuguese Way</h1>
         <p class="tagline">Where it all began.</p>
       </div>
+      <ul class="facts facts-band" aria-label="Camino quick facts">
+        <li><span class="fact-label">Dates</span><span class="fact-value">Sep 29 – Oct 12, 2019</span></li>
+        <li><span class="fact-label">Distance</span><span class="fact-value">240 km</span></li>
+        <li><span class="fact-label">Route</span><span class="fact-value">Porto &rarr; Santiago</span></li>
+        <li><span class="fact-label">Countries</span><span class="fact-value"><img class="flag" src="photos/flags/pt.png" alt="">Portugal &middot; <img class="flag" src="photos/flags/es.png" alt="">Spain</span></li>
+      </ul>
+
       <div class="lead">
         <figure class="lead-photo">
           <img src="photos/camino1/camino1-01.jpg" alt="The three Camino Brothers — Mike, Nicki and Dennis — smiling together at an outdoor café in Portugal">
@@ -132,12 +148,6 @@
       </div>
       </div>
 
-      <ul class="facts facts-band" aria-label="Camino quick facts">
-        <li><span class="fact-label">Dates</span><span class="fact-value">Sep 29 – Oct 12, 2019</span></li>
-        <li><span class="fact-label">Distance</span><span class="fact-value">240 km</span></li>
-        <li><span class="fact-label">Route</span><span class="fact-value">Porto &rarr; Santiago</span></li>
-        <li><span class="fact-label">Countries</span><span class="fact-value"><img class="flag" src="photos/flags/pt.png" alt="">Portugal &middot; <img class="flag" src="photos/flags/es.png" alt="">Spain</span></li>
-      </ul>
 
 
       <h2 class="section-title">Photos</h2>
