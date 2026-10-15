@@ -104,6 +104,11 @@
     @media (min-width: 761px) {
       .lead-photo { min-height: 560px; }
     }
+
+    /* Preview 3i: thumbnails 25% smaller again (more photos coming) */
+    .gallery-75 { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.5rem; }
+    .gallery-75 img { height: 107px; }
+    @media (max-width: 760px) { .gallery-75 img { height: 85px; } }
   </style>
 </head>
 <body>
