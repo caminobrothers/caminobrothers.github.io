@@ -173,7 +173,13 @@ main { padding-bottom: 3rem; }
   object-position: 50% 10%;
 }
 .hero img.hero-photo.focal-mid {
-  object-position: 50% 55%;
+  object-position: 50% 62%;
+}
+.hero.tall {
+  min-height: 58vh;
+}
+.hero.bright::after {
+  background: linear-gradient(to top, rgba(18, 14, 10, 0.78) 0%, rgba(18, 14, 10, 0.22) 55%, rgba(18, 14, 10, 0.12) 100%);
 }
 /* dark gradient for title legibility */
 .hero::after {
@@ -690,6 +696,8 @@ h1, h2, h3 {
 }
 @media (max-width: 560px) {
   body { font-size: 1rem; }
+  .hero.tall { min-height: 34vh; }
+  .hero img.hero-photo.focal-mid { object-position: 64% 62%; }
   .facts li { flex: 1 1 44%; min-width: 0; }
   .lb-prev { left: 0.4rem; }
   .lb-next { right: 0.4rem; }
