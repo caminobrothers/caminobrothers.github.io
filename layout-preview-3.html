@@ -73,6 +73,14 @@
     .video-row { display: block; max-width: 560px; margin: 0.8rem auto 0; }
     .video-row .quote-card { margin-bottom: 1rem; text-align: center; }
     .video-row figcaption { text-align: center; }
+
+    /* Preview 3e: no pull-quote; fixed-size lead, story continues below */
+    .story-cont { max-width: 780px; margin: 1.2rem auto 0; }
+    @media (min-width: 761px) {
+      .lead { height: 500px; }
+      .lead .story { overflow: hidden; }
+      .lead-photo { height: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -139,7 +147,9 @@
           been strangers a fortnight earlier arrived as something else
           entirely.
         </p>
-        <aside class="pullquote">&ldquo;My thoughts are very confusing and have not landed yet.&rdquo;<span>— Nicki, the last night of the walk</span></aside>
+      </div>
+
+      <div class="story-cont">
         <p>
           That night, back in his own country, Nicki sent the message that
           sums up every camino's last day: "My thoughts are very confusing
