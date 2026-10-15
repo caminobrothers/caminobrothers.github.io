@@ -295,6 +295,14 @@ h1, h2, h3 {
   font-weight: 600;
   color: var(--iron);
 }
+.flag {
+  width: 1.35em;
+  height: auto;
+  vertical-align: -0.22em;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
+  margin-right: 0.3em;
+}
 
 /* ---------- story / prose ---------- */
 .story {
