@@ -92,6 +92,13 @@
     @media (max-width: 760px) {
       .lead-photo { height: 330px; }
     }
+
+    /* Preview 3g: no clipping — photo holds the fixed height, story flows */
+    @media (min-width: 761px) {
+      .lead { height: auto; }
+      .lead .story { overflow: visible; font-size: 0.98rem; line-height: 1.55; }
+      .lead-photo { height: auto; min-height: 440px; }
+    }
   </style>
 </head>
 <body>
