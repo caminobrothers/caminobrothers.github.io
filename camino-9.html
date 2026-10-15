@@ -15,8 +15,11 @@
     @media (min-width: 921px) {
       .header-inner { max-width: none; flex-wrap: wrap; padding-left: 2rem; padding-right: 2rem; }
       .main-nav { order: 3; flex: 1 1 100%; margin-left: 0; }
-      .main-nav ul { justify-content: space-between; flex-wrap: nowrap; }
+      .main-nav ul { justify-content: space-between; flex-wrap: wrap; row-gap: 0.15rem; }
       .main-nav a { white-space: nowrap; }
+    }
+    @media (min-width: 921px) and (max-width: 1450px) {
+      .main-nav a { font-size: 0.86rem; }
     }
   </style>
 </head>
