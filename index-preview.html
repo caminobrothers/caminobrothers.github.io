@@ -126,6 +126,15 @@
     .lead-photo img { object-position: 50% 40%; }
     .welcome { text-align: center; max-width: 700px; margin: 1.6rem auto 0; font-size: 1.1rem; }
   </style>
+
+  <style>
+    /* Homepage preview v2 fixes */
+    @media (min-width: 761px) {
+      .lead { align-items: start; }
+      .lead-photo { height: 500px; min-height: 500px; }
+    }
+    .lead-left .welcome { text-align: left; margin: 1.1rem 0 0; font-size: 1.04rem; max-width: none; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -137,7 +146,7 @@
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="camino-1.html" aria-current="page">Home</a></li>
+          <li><a href="camino-1.html">Portuguese (2019)</a></li>
           <li><a href="camino-2.html">Francés (2021)</a></li>
           <li><a href="camino-3.html">Rheinsteig (2022)</a></li>
           <li><a href="camino-4.html">Portuguese (2023)</a></li>
@@ -162,16 +171,26 @@
 
       <ul class="facts facts-band" aria-label="Camino Brothers at a glance">
         <li><span class="fact-label">Caminos walked</span><span class="fact-value">Eight</span></li>
-        <li><span class="fact-label">Countries</span><span class="fact-value"><img class="flag" src="photos/flags/pt.png" alt="">Portugal &middot; <img class="flag" src="photos/flags/es.png" alt="">Spain &middot; <img class="flag" src="photos/flags/de.png" alt="">Germany &middot; <img class="flag" src="photos/flags/at.png" alt="">Austria</span></li>
-        <li><span class="fact-label">Walking together since</span><span class="fact-value">2019</span></li>
+        <li><span class="fact-label">Countries</span><span class="fact-value">Four</span></li>
+        <li><span class="fact-label">Together since</span><span class="fact-value">2019</span></li>
         <li><span class="fact-label">Next up</span><span class="fact-value">Camino 9 &middot; 2027</span></li>
       </ul>
 
       <div class="lead">
-        <figure class="lead-photo">
-          <img src="photos/camino1/camino1-04.jpg" alt="Selfie of the three Camino Brothers — Nicki, Mike and Dennis — smiling on the trail">
-          <figcaption>The three brothers on the trail</figcaption>
-        </figure>
+        <div class="lead-left">
+          <figure class="lead-photo">
+            <img src="photos/camino1/camino1-03.jpg" alt="The three Camino Brothers with backpacks, posing on a wooded trail in Portugal">
+            <figcaption>On the trail in Portugal — the first camino, 2019</figcaption>
+          </figure>
+          <p class="welcome">
+        Buen camino, and welcome. We are Nicki, Mike and Dennis, and since
+        2019 we've walked eight caminos across Spain, Portugal, Germany and
+        Austria together — a few thousand kilometres of trail,
+        countless café con leches, and a brotherhood forged on the way.
+        This site documents each one: the routes, the dates, the stories,
+        and the photos.
+      </p>
+        </div>
         <div class="lead-side">
           <h2 class="section-title">The Caminos</h2>
         <ul class="camino-list">
@@ -188,14 +207,7 @@
         </div>
       </div>
 
-      <p class="welcome">
-        Buen camino, and welcome. We are Nicki, Mike and Dennis, and since
-        2019 we've walked eight caminos across Spain, Portugal, Germany and
-        Austria together — a few thousand kilometres of trail,
-        countless café con leches, and a brotherhood forged on the way.
-        This site documents each one: the routes, the dates, the stories,
-        and the photos.
-      </p>
+
       <div class="ornament" aria-hidden="true"><svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg></div>
 
       <section class="shop-promo" aria-label="Shop">
