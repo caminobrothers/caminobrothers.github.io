@@ -120,6 +120,15 @@
     .video-pair video { width: 100%; height: 460px; object-fit: cover; border: 1px solid var(--gold); border-radius: 4px; display: block; background: var(--iron); }
     .video-pair figcaption { text-align: center; font-style: italic; color: var(--ink-soft); margin-top: 0.35rem; }
     @media (max-width: 760px) { .video-pair { grid-template-columns: 1fr; } .video-pair video { height: auto; max-height: 480px; } }
+
+    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 2.2rem; flex-wrap: wrap; max-width: 1080px; margin: 0 auto; padding: 0 0.5rem; }
+    .chat-quote { max-width: 340px; margin-top: 1.4rem; text-align: left; }
+    .chat-bubble { position: relative; min-height: 4.3rem; background: #d9e9f6; border: 1px solid #9dbfdc; border-radius: 14px; padding: 0.7rem 1rem; box-shadow: 2px 2px 0 var(--shadow); }
+    .chat-bubble p { margin: 0; font-size: 1.05rem; }
+    .chat-bubble::after { content: ""; position: absolute; left: -7px; top: 24px; width: 12px; height: 12px; background: #d9e9f6; border-left: 1px solid #9dbfdc; border-bottom: 1px solid #9dbfdc; transform: rotate(45deg); }
+    .chat-meta { font-size: 0.78rem; color: var(--ink-soft); margin: 0.4rem 0 0 0.4rem; }
+    .chat-note { font-size: 0.82rem; font-style: italic; color: var(--ink-soft); margin: 0.15rem 0 0 0.4rem; }
+    @media (max-width: 820px) { .title-row { justify-content: center; } .chat-quote { margin-top: 0.2rem; } .chat-bubble::after { display: none; } }
   </style>
   <style>
     /* Rollout: placeholder panel where a camino's main photo will go */
@@ -159,11 +168,17 @@
 
   <main id="main">
     <div class="wrap">
+      <div class="title-row">
       <div class="preview-title">
         <p class="eyebrow">Camino &middot; 2025</p>
         <h1>The Northern Way</h1>
         <p class="tagline">Two trails, one summer.</p>
       </div>
+      <div class="chat-quote">
+        <div class="chat-bubble"><p>&ldquo;The best bed of our entire trip. Guaranteed&rdquo;</p></div>
+        <p class="chat-meta">Mike &middot; WhatsApp chat, Jul 21, 2025</p>
+      </div>
+    </div>
       <ul class="facts facts-band" aria-label="Camino quick facts">
         <li><span class="fact-label">Dates</span><span class="fact-value">Jul 10 – Jul 24, 2025</span></li>
         <li><span class="fact-label">Distance</span><span class="fact-value">245 km</span></li>
@@ -172,10 +187,9 @@
       </ul>
 
       <div class="lead">
-        <figure class="lead-photo lead-placeholder" role="img" aria-label="Main photo coming soon">
-          <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg>
-          <p>MAIN PHOTO COMING SOON</p>
-          <span>Pictures from this camino are on the way.</span>
+        <figure class="lead-photo">
+          <img src="photos/camino7/camino7-lead.jpg" alt="Mike and Nicki selfie on a bridge over a wide river at sunset, hills behind">
+          <figcaption>Golden hour on the Bidasoa — the bridge between Hendaye and Irun</figcaption>
         </figure>
       <div class="story">
         <h2 class="section-title">Two trails, one summer</h2>
@@ -213,9 +227,50 @@
       </div>
 
       <h2 class="section-title">Photos</h2>
-      <div class="story">
-        <p class="placeholder-note">Photos from the Norte and the Francés are on the way — the gallery opens as soon as they're added.</p>
+      <ul class="gallery gallery-75">
+        <li><button type="button" data-full="photos/camino7/camino7-01.jpg" data-alt="Mike and Nicki toasting with Beck's beers at an airport bar" data-caption="The reunion — first beers of the trip"><img src="photos/camino7/camino7-01.jpg" alt="Mike and Nicki toasting with Beck's beers at an airport bar" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-02.jpg" data-alt="Mike and Nicki selfie on a bridge over a wide river at sunset, hills behind" data-caption="Golden hour on the Bidasoa — Hendaye behind, Irun ahead"><img src="photos/camino7/camino7-02.jpg" alt="Mike and Nicki selfie on a bridge over a wide river at sunset, hills behind" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-03.jpg" data-alt="Nicki and Mike with full packs under green plane trees" data-caption="Day one on the Norte — out under the plane trees"><img src="photos/camino7/camino7-03.jpg" alt="Nicki and Mike with full packs under green plane trees" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-04.jpg" data-alt="Nicki and Mike on a seafront promenade with the sea and a green island hill behind" data-caption="The seafront at San Sebastián"><img src="photos/camino7/camino7-04.jpg" alt="Nicki and Mike on a seafront promenade with the sea and a green island hill behind" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-05.jpg" data-alt="Mike and Nicki selfie above La Concha beach and bay" data-caption="La Concha bay, San Sebastián"><img src="photos/camino7/camino7-05.jpg" alt="Mike and Nicki selfie above La Concha beach and bay" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-06.jpg" data-alt="Nicki and Mike selfie in front of flowering hydrangea bushes" data-caption="Hydrangea season on the Norte"><img src="photos/camino7/camino7-06.jpg" alt="Nicki and Mike selfie in front of flowering hydrangea bushes" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-07.jpg" data-alt="Nicki sitting on the ground beside his pack, resting on the trail" data-caption="A breather on the Francés — Nicki takes five"><img src="photos/camino7/camino7-07.jpg" alt="Nicki sitting on the ground beside his pack, resting on the trail" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-08.jpg" data-alt="Nicki and Mike selfie at dusk in a stone village with thatched palloza roofs" data-caption="Dusk in the stone village — O Cebreiro's pallozas"><img src="photos/camino7/camino7-08.jpg" alt="Nicki and Mike selfie at dusk in a stone village with thatched palloza roofs" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-09.jpg" data-alt="Nicki and Mike selfie in front of a stone church bell tower" data-caption="Under the bell tower"><img src="photos/camino7/camino7-09.jpg" alt="Nicki and Mike selfie in front of a stone church bell tower" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-10.jpg" data-alt="Nicki peeking out of a tall hydrangea hedge beside a country road" data-caption="Nicki, hiding in the hydrangeas"><img src="photos/camino7/camino7-10.jpg" alt="Nicki peeking out of a tall hydrangea hedge beside a country road" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-11.jpg" data-alt="Close-up of a donkey's face being petted by Nicki's tattooed hand" data-caption="Nicki makes a friend"><img src="photos/camino7/camino7-11.jpg" alt="Close-up of a donkey's face being petted by Nicki's tattooed hand" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-12.jpg" data-alt="White bell tents with picnic benches and parasols on a grassy site" data-caption="The tent village — home of the famous best bed"><img src="photos/camino7/camino7-12.jpg" alt="White bell tents with picnic benches and parasols on a grassy site" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-13.jpg" data-alt="Mike seated at a picnic table in front of a bell tent, raising a glass" data-caption="Mike approves of the accommodation"><img src="photos/camino7/camino7-13.jpg" alt="Mike seated at a picnic table in front of a bell tent, raising a glass" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-14.jpg" data-alt="Mike and Nicki toasting with beer and tinto at an outdoor café" data-caption="Estrella Galicia, well earned"><img src="photos/camino7/camino7-14.jpg" alt="Mike and Nicki toasting with beer and tinto at an outdoor café" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-15.jpg" data-alt="Mike and Nicki holding dark beers in front of an ornate black door" data-caption="Dark beers by the old door"><img src="photos/camino7/camino7-15.jpg" alt="Mike and Nicki holding dark beers in front of an ornate black door" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-16.jpg" data-alt="Nicki pulling a face at a restaurant table while Mike gives a thumbs up, beers in hand" data-caption="Supper faces"><img src="photos/camino7/camino7-16.jpg" alt="Nicki pulling a face at a restaurant table while Mike gives a thumbs up, beers in hand" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-17.jpg" data-alt="Black-and-white selfie of Nicki and Mike grinning in a narrow alley at night" data-caption="After dark in the old town — the black-and-white mood"><img src="photos/camino7/camino7-17.jpg" alt="Black-and-white selfie of Nicki and Mike grinning in a narrow alley at night" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-18.jpg" data-alt="Nicki and Mike selfie in front of the Santiago de Compostela cathedral facade" data-caption="Santiago! In front of the cathedral, Jul 22"><img src="photos/camino7/camino7-18.jpg" alt="Nicki and Mike selfie in front of the Santiago de Compostela cathedral facade" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-19.jpg" data-alt="Mike and Nicki resting against the stone wall of Santiago cathedral" data-caption="Leaning on the cathedral stones"><img src="photos/camino7/camino7-19.jpg" alt="Mike and Nicki resting against the stone wall of Santiago cathedral" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-20.jpg" data-alt="Nicki standing beside a pool table in a tiled courtyard bar" data-caption="Pool night in Santiago"><img src="photos/camino7/camino7-20.jpg" alt="Nicki standing beside a pool table in a tiled courtyard bar" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-21.jpg" data-alt="Nicki and Mike selfie at night beside a green-lit fountain" data-caption="Night lights — the fountain garden"><img src="photos/camino7/camino7-21.jpg" alt="Nicki and Mike selfie at night beside a green-lit fountain" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-22.jpg" data-alt="Museum display of a mounted medieval archer drawing his bow" data-caption="Toledo solo — the mounted archer at the army museum"><img src="photos/camino7/camino7-22.jpg" alt="Museum display of a mounted medieval archer drawing his bow" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-23.jpg" data-alt="Mike selfie in a two-storey arched courtyard with a checkered marble floor" data-caption="The Alcázar courtyard, Toledo"><img src="photos/camino7/camino7-23.jpg" alt="Mike selfie in a two-storey arched courtyard with a checkered marble floor" loading="lazy"></button></li>
+        <li><button type="button" data-full="photos/camino7/camino7-24.jpg" data-alt="Mike at an outdoor café table at Toledo station with a beer" data-caption="A last beer at Toledo station — Madrid next"><img src="photos/camino7/camino7-24.jpg" alt="Mike at an outdoor café table at Toledo station with a beer" loading="lazy"></button></li>
+      </ul>
+      <div class="story" style="display:none">
       </div>
+
+      <section aria-label="Camino video">
+        <h2 class="section-title">Video</h2>
+        <div class="video-stack">
+        <div class="video-pair">
+        <figure>
+          <video controls preload="metadata" playsinline src="videos/camino7-clip1.mp4" title="The archway into the Obradoiro, Santiago"></video>
+          <figcaption>Under the arch to the Obradoiro — a piper plays pilgrims in as Nicki comes down the steps</figcaption>
+        </figure>
+        <figure>
+          <video controls preload="metadata" playsinline src="videos/camino7-clip2.mp4" title="Nicki at the pool table"></video>
+          <figcaption>Nicki lines one up — pool night in Santiago</figcaption>
+        </figure>
+        </div>
+        </div>
+      </section>
 
       <nav class="pager" aria-label="Camino pages">
         <a href="camino-6.html">&larr; Jakobsweg (2024)</a>
