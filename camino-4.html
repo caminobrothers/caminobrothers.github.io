@@ -121,7 +121,16 @@
     .video-pair figcaption { text-align: center; font-style: italic; color: var(--ink-soft); margin-top: 0.35rem; }
     @media (max-width: 760px) { .video-pair { grid-template-columns: 1fr; } .video-pair video { height: auto; max-height: 480px; } }
       @media (min-width: 1000px) {.gallery-75 { grid-template-columns: repeat(8, 1fr);}}
-</style>
+
+    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 2.2rem; flex-wrap: wrap; max-width: 1080px; margin: 0 auto; padding: 0 0.5rem; }
+    .chat-quote { max-width: 300px; margin-top: 1.4rem; text-align: left; }
+    .chat-bubble { position: relative; background: #d9e9f6; border: 1px solid #9dbfdc; border-radius: 14px; padding: 0.7rem 1rem; box-shadow: 2px 2px 0 var(--shadow); }
+    .chat-bubble p { margin: 0; font-size: 1.05rem; }
+    .chat-bubble::after { content: ""; position: absolute; left: -7px; top: 24px; width: 12px; height: 12px; background: #d9e9f6; border-left: 1px solid #9dbfdc; border-bottom: 1px solid #9dbfdc; transform: rotate(45deg); }
+    .chat-meta { font-size: 0.78rem; color: var(--ink-soft); margin: 0.4rem 0 0 0.4rem; }
+    .chat-note { font-size: 0.82rem; font-style: italic; color: var(--ink-soft); margin: 0.15rem 0 0 0.4rem; }
+    @media (max-width: 820px) { .title-row { justify-content: center; } .chat-quote { margin-top: 0.2rem; } .chat-bubble::after { display: none; } }
+  </style>
   <style>
     /* Rollout: placeholder panel where a camino's main photo will go */
     .lead-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; background: var(--cream); color: var(--ink-soft); text-align: center; padding: 2rem; }
@@ -160,11 +169,18 @@
 
   <main id="main">
     <div class="wrap">
+      <div class="title-row">
       <div class="preview-title">
         <p class="eyebrow">Camino &middot; 2023</p>
         <h1>The Portuguese Way</h1>
         <p class="tagline">The encore.</p>
       </div>
+      <div class="chat-quote">
+        <div class="chat-bubble"><p>&ldquo;I am so fucking happy that we will hike on our footsteps &hellip;&rdquo;</p></div>
+        <p class="chat-meta">Nicki &middot; WhatsApp chat, Jan 31, 2023</p>
+        <p class="chat-note">Camino 4 retraced the first walk&rsquo;s road &mdash; with one surprise guest along for the first five kilometres.</p>
+      </div>
+    </div>
       <ul class="facts facts-band" aria-label="Camino quick facts">
         <li><span class="fact-label">Dates</span><span class="fact-value">May 5 – May 19, 2023</span></li>
         <li><span class="fact-label">Distance</span><span class="fact-value">340 km</span></li>
@@ -247,11 +263,6 @@
 
       <h2 class="section-title">Video</h2>
       <div class="video-stack">
-        <div class="quote-card">
-          <p>&ldquo;I am so fucking happy that we will hike on our footsteps &hellip;&rdquo;</p>
-          <span>Nicki in the WhatsApp chat, Jan 31, 2023</span>
-          <p class="quote-note">Camino 4 retraced the first walk's road — with one surprise guest along for the first five kilometres.</p>
-        </div>
         <div class="video-pair">
           <figure>
             <video controls preload="metadata" playsinline src="videos/camino4-clip1.mp4"></video>
