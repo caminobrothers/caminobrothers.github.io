@@ -121,6 +121,15 @@
     .video-pair figcaption { text-align: center; font-style: italic; color: var(--ink-soft); margin-top: 0.35rem; }
     @media (max-width: 760px) { .video-pair { grid-template-columns: 1fr; } .video-pair video { height: auto; max-height: 480px; } }
   @media (min-width: 1000px) {.gallery-75 { grid-template-columns: repeat(8, 1fr);}}
+  
+    .title-row { display: flex; align-items: center; justify-content: center; gap: 2.2rem; flex-wrap: wrap; }
+    .chat-quote { max-width: 300px; margin-top: 1.4rem; text-align: left; }
+    .chat-bubble { position: relative; background: var(--cream); border: 1px solid var(--gold); border-radius: 14px; padding: 0.7rem 1rem; box-shadow: 2px 2px 0 var(--shadow); }
+    .chat-bubble p { margin: 0; font-size: 1.05rem; }
+    .chat-bubble::after { content: ""; position: absolute; left: -7px; top: 24px; width: 12px; height: 12px; background: var(--cream); border-left: 1px solid var(--gold); border-bottom: 1px solid var(--gold); transform: rotate(45deg); }
+    .chat-meta { font-size: 0.78rem; color: var(--ink-soft); margin: 0.4rem 0 0 0.4rem; }
+    .chat-note { font-size: 0.82rem; font-style: italic; color: var(--ink-soft); margin: 0.15rem 0 0 0.4rem; }
+    @media (max-width: 700px) { .chat-quote { margin-top: 0.2rem; } .chat-bubble::after { display: none; } }
   </style>
   <style>
     /* Rollout: placeholder panel where a camino's main photo will go */
@@ -160,23 +169,24 @@
 
   <main id="main">
     <div class="wrap">
+      <div class="title-row">
       <div class="preview-title">
         <p class="eyebrow">Camino &middot; 2022</p>
         <h1>The Rhine Trail</h1>
         <p class="tagline">Dennis is back.</p>
       </div>
+      <div class="chat-quote">
+        <div class="chat-bubble"><p>&ldquo;Wanderlust&hellip; all the time!!!&rdquo;</p></div>
+        <p class="chat-meta">Nicki &middot; WhatsApp chat, Aug 23, 2022</p>
+        <p class="chat-note">Sent four days after the hike ended &mdash; the Rheinsteig was over, the wanderlust wasn&rsquo;t.</p>
+      </div>
+    </div>
       <ul class="facts facts-band" aria-label="Camino quick facts">
         <li><span class="fact-label">Dates</span><span class="fact-value">Aug 5 – Aug 19, 2022</span></li>
         <li><span class="fact-label">Distance</span><span class="fact-value">195 km</span></li>
         <li><span class="fact-label">Route</span><span class="fact-value">Biebrich Castle &rarr; Sayn</span></li>
         <li><span class="fact-label">Countries</span><span class="fact-value"><img class="flag" src="photos/flags/de.png" alt="">Germany</span></li>
       </ul>
-
-      <blockquote class="quote-card">
-          <p>&ldquo;Wanderlust&hellip; all the time!!!&rdquo;</p>
-          <cite>&mdash; Nicki in the WhatsApp chat, Aug 23, 2022 &mdash; four days after the hike ended</cite>
-          <p class="quote-note">The Rheinsteig was over. The wanderlust wasn&rsquo;t.</p>
-        </blockquote>
   <div class="lead">
         <figure class="lead-photo">
           <img src="photos/camino3/camino3-lead.jpg" alt="Dennis fixing a blister on Mike's foot with a Compeed plaster at a rest stop">
