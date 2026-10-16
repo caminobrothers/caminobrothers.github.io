@@ -120,7 +120,8 @@
     .video-pair video { width: 100%; height: 460px; object-fit: cover; border: 1px solid var(--gold); border-radius: 4px; display: block; background: var(--iron); }
     .video-pair figcaption { text-align: center; font-style: italic; color: var(--ink-soft); margin-top: 0.35rem; }
     @media (max-width: 760px) { .video-pair { grid-template-columns: 1fr; } .video-pair video { height: auto; max-height: 480px; } }
-  </style>
+      @media (min-width: 1000px) {.gallery-75 { grid-template-columns: repeat(8, 1fr);}}
+</style>
   <style>
     /* Rollout: placeholder panel where a camino's main photo will go */
     .lead-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; background: var(--cream); color: var(--ink-soft); text-align: center; padding: 2rem; }
@@ -173,7 +174,7 @@
 
       <div class="lead">
         <figure class="lead-photo">
-          <img src="photos/camino4/camino4-02.jpg" alt="Mike, his daughter, Nicki and Dennis on the banks of the Douro in Porto, with the river behind them">
+          <img src="photos/camino4/camino4-lead.jpg" alt="Mike, his daughter, Nicki and Dennis on the banks of the Douro in Porto, with the river behind them">
           <figcaption>The surprise guest — Mike's daughter joins the brothers in Porto, the evening before the walk</figcaption>
         </figure>
       <div class="story">
@@ -218,9 +219,50 @@
 
       <h2 class="section-title">Photos</h2>
       <ul class="gallery gallery-75" aria-label="Camino photo gallery">
-        <li><button data-full="photos/camino4/camino4-01.jpg" data-alt="Group selfie in Porto: Mike on the left, his daughter in the centre, Dennis on the right and Nicki in front, all smiling" data-caption="The surprise guest — Mike's daughter joins the brothers in Porto, the evening before the walk"><img src="photos/camino4/camino4-01.jpg" alt="Group selfie in Porto: Mike on the left, his daughter in the centre, Dennis on the right and Nicki in front, all smiling" loading="lazy"></button></li>
-        <li><button data-full="photos/camino4/camino4-02.jpg" data-alt="Mike, his daughter, Nicki and Dennis on the banks of the Douro in Porto, with the Dom Luis I Bridge behind them" data-caption="Day one, along the Douro — the first five kilometres, with a fourth pilgrim"><img src="photos/camino4/camino4-02.jpg" alt="Mike, his daughter, Nicki and Dennis on the banks of the Douro in Porto, with the Dom Luis I Bridge behind them" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-01.jpg" data-alt="Mike and his daughter Sarah smiling together in a lift in Porto" data-caption="The surprise guest — Sarah makes it to Porto"><img src="photos/camino4/camino4-01.jpg" alt="Mike and his daughter Sarah smiling together in a lift in Porto" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-02.jpg" data-alt="Mike and Sarah smiling in a Porto square at dusk, a statue behind them" data-caption="Father and daughter in Porto, the evening she surprised him"><img src="photos/camino4/camino4-02.jpg" alt="Mike and Sarah smiling in a Porto square at dusk, a statue behind them" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-03.jpg" data-alt="Mike at a café table with a fellow pilgrim" data-caption="A café stop along the way"><img src="photos/camino4/camino4-03.jpg" alt="Mike at a café table with a fellow pilgrim" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-04.jpg" data-alt="The three brothers with two fellow pilgrims around a terrace table with beers" data-caption="Terrace hour with new friends"><img src="photos/camino4/camino4-04.jpg" alt="The three brothers with two fellow pilgrims around a terrace table with beers" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-05.jpg" data-alt="Mike, Nicki and Dennis taking a selfie on the bridge at Barcelos, the river behind them" data-caption="The bridge at Barcelos"><img src="photos/camino4/camino4-05.jpg" alt="Mike, Nicki and Dennis taking a selfie on the bridge at Barcelos, the river behind them" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-06.jpg" data-alt="Nicki, Dennis and Mike around a sunny terrace table with beer bottles" data-caption="Three brothers, a terrace in the sun"><img src="photos/camino4/camino4-06.jpg" alt="Nicki, Dennis and Mike around a sunny terrace table with beer bottles" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-07.jpg" data-alt="The three brothers pulling silly faces in a narrow Galician street" data-caption="Silly faces in a Galician lane"><img src="photos/camino4/camino4-07.jpg" alt="The three brothers pulling silly faces in a narrow Galician street" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-08.jpg" data-alt="The three brothers reflected in a convex traffic mirror on a country road" data-caption="The traffic-mirror portrait"><img src="photos/camino4/camino4-08.jpg" alt="The three brothers reflected in a convex traffic mirror on a country road" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-09.jpg" data-alt="Dennis standing among trees with his arms spread wide" data-caption="Dennis, king of the woods"><img src="photos/camino4/camino4-09.jpg" alt="Dennis standing among trees with his arms spread wide" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-10.jpg" data-alt="Dennis on a wooden footbridge holding onto two trees, arms spread" data-caption="Dennis holds up the forest"><img src="photos/camino4/camino4-10.jpg" alt="Dennis on a wooden footbridge holding onto two trees, arms spread" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-11.jpg" data-alt="The three brothers resting against a stone wall in the sun" data-caption="Siesta mode by the stone wall"><img src="photos/camino4/camino4-11.jpg" alt="The three brothers resting against a stone wall in the sun" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-12.jpg" data-alt="Mike, Nicki and Dennis in front of a ruined, ivy-covered villa" data-caption="“Best friends for life” — Nicki's caption, and he's not wrong"><img src="photos/camino4/camino4-12.jpg" alt="Mike, Nicki and Dennis in front of a ruined, ivy-covered villa" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-13.jpg" data-alt="A glass and two bottles of Estrella Galicia on a bar table" data-caption="Estrella Galicia at Hangar 218"><img src="photos/camino4/camino4-13.jpg" alt="A glass and two bottles of Estrella Galicia on a bar table" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-14.jpg" data-alt="Dennis showing Nicki a photo on his phone across a bar table at Hangar 218" data-caption="Dennis shares the evidence at Hangar 218"><img src="photos/camino4/camino4-14.jpg" alt="Dennis showing Nicki a photo on his phone across a bar table at Hangar 218" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-15.jpg" data-alt="Nicki and Mike taking a selfie in a plaza at night" data-caption="Night lights in the plaza"><img src="photos/camino4/camino4-15.jpg" alt="Nicki and Mike taking a selfie in a plaza at night" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-16.jpg" data-alt="Nicki standing on the old stone bridge at Ponte Sampaio, the village behind him" data-caption="Nicki crossing at Ponte Sampaio"><img src="photos/camino4/camino4-16.jpg" alt="Nicki standing on the old stone bridge at Ponte Sampaio, the village behind him" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-17.jpg" data-alt="The three brothers posing with a tall stone pilgrim statue" data-caption="A stone pilgrim joins the crew"><img src="photos/camino4/camino4-17.jpg" alt="The three brothers posing with a tall stone pilgrim statue" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-18.jpg" data-alt="Nicki and Mike at a bar table in the evening, Mike raising his glass" data-caption="An evening toast"><img src="photos/camino4/camino4-18.jpg" alt="Nicki and Mike at a bar table in the evening, Mike raising his glass" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-19.jpg" data-alt="Dennis and Mike sitting at a roadside café table" data-caption="Dennis and Mike, roadside café"><img src="photos/camino4/camino4-19.jpg" alt="Dennis and Mike sitting at a roadside café table" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-20.jpg" data-alt="Mike sitting on a wall raising a glass of beer, the three backpacks lined up beside him" data-caption="Mike's roadside toast — the packs at rest"><img src="photos/camino4/camino4-20.jpg" alt="Mike sitting on a wall raising a glass of beer, the three backpacks lined up beside him" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-21.jpg" data-alt="The three brothers pulling faces in a green-walled lift" data-caption="Going up — elevator faces, take one"><img src="photos/camino4/camino4-21.jpg" alt="The three brothers pulling faces in a green-walled lift" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-22.jpg" data-alt="The three brothers in the same lift, pulling different faces" data-caption="Elevator faces, take two"><img src="photos/camino4/camino4-22.jpg" alt="The three brothers in the same lift, pulling different faces" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-23.jpg" data-alt="Mike, Nicki and Dennis in front of Santiago cathedral in the Praza do Obradoiro" data-caption="Santiago — made it, again"><img src="photos/camino4/camino4-23.jpg" alt="Mike, Nicki and Dennis in front of Santiago cathedral in the Praza do Obradoiro" loading="lazy"></button></li>
+        <li><button data-full="photos/camino4/camino4-24.jpg" data-alt="The three brothers around the Km 0,000 marker at Finisterre, the lighthouse behind them" data-caption="Km 0,000 — the end of the world"><img src="photos/camino4/camino4-24.jpg" alt="The three brothers around the Km 0,000 marker at Finisterre, the lighthouse behind them" loading="lazy"></button></li>
       </ul>
+
+      <h2 class="section-title">Video</h2>
+      <div class="video-stack">
+        <div class="quote-card">
+          <p>&ldquo;11 more weeks and we see up in Porto. Having beer by the Douro and staying in our nice apartment. Then we hike in our footsteps&rdquo;</p>
+          <span>Mike in the WhatsApp chat, Feb 15, 2023</span>
+          <p class="quote-note">Camino 4 retraced the first walk's road — with one surprise guest along for the first five kilometres.</p>
+        </div>
+        <div class="video-pair">
+          <figure>
+            <video controls preload="metadata" playsinline src="videos/camino4-clip1.mp4"></video>
+            <figcaption>Surprising my dad in Porto — Sarah's film of the day she crashed Camino 4</figcaption>
+          </figure>
+          <figure>
+            <video controls preload="metadata" playsinline src="videos/camino4-clip2.mp4"></video>
+            <figcaption>A playground break for Dennis</figcaption>
+          </figure>
+        </div>
+      </div>
 
       <nav class="pager" aria-label="Camino pages">
         <a href="camino-3.html">&larr; Rheinsteig (2022)</a>
