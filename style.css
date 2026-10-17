@@ -664,7 +664,7 @@ h1, h2, h3 {
   font-size: 0.92rem;
 }
 .site-footer p { margin: 0.25rem 0; }
-.site-footer a { color: var(--gold); }
+.site-footer a { color: #e8dcc0; }
 .site-footer .footer-brand {
   font-family: "Cinzel", Georgia, serif;
   color: var(--cream);
