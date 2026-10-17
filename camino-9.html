@@ -27,6 +27,19 @@
     /* Banner: brand centred as a masthead (menu keeps its own full-width row below) */
     .site-header .brand { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
   </style>
+
+  <style>
+    /* Coming Soon layout: facts + story on the left, trail artwork on the right */
+    .c9-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: start; margin-top: 1.6rem; }
+    .c9-layout .facts { margin-top: 0; justify-content: flex-start; }
+    .c9-layout .facts li { max-width: none; }
+    .c9-layout .story { margin: 0; max-width: none; }
+    .c9-art { margin: 0 auto; max-width: 380px; background: var(--cream); border: 1px solid var(--gold); border-radius: 3px; box-shadow: 3px 3px 0 var(--shadow); padding: 0.6rem; }
+    .c9-art img { display: block; width: 100%; height: auto; }
+    @media (max-width: 820px) {
+      .c9-layout { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -58,15 +71,23 @@
       <h1 class="page-title">Coming Soon</h1>
       <div class="ornament" aria-hidden="true"><svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg></div>
 
-      <ul class="facts" aria-label="Camino 9 quick facts">
-        <li><span class="fact-label">Dates</span><span class="fact-value">Sep 28 – Oct 18, 2027</span></li>
-        <li><span class="fact-label">Route</span><span class="fact-value">Saint-Jean-Pied-de-Port &rarr; León</span></li>
-        <li><span class="fact-label">Duration</span><span class="fact-value">21 days</span></li>
-      </ul>
+      <div class="c9-layout">
+        <div class="c9-text">
+          <ul class="facts" aria-label="Camino 9 quick facts">
+            <li><span class="fact-label">Dates</span><span class="fact-value">Sep 28 – Oct 18, 2027</span></li>
+            <li><span class="fact-label">Route</span><span class="fact-value">Saint-Jean-Pied-de-Port &rarr; León</span></li>
+            <li><span class="fact-label">Duration</span><span class="fact-value">21 days</span></li>
+          </ul>
 
-      <div class="story">
-        <p><strong>The ninth Camino Brothers hike — September 2027.</strong> The ninth Camino Brothers hike takes on the Camino Francés, the classic pilgrim road across northern Spain — 500 km from Saint-Jean-Pied-de-Port to León. Three weeks on the trail, September 28 to October 18, 2027.</p>
-        <p>Follow along here once the boots hit the trail.</p>
+          <div class="story">
+            <p><strong>The ninth Camino Brothers hike — September 2027.</strong> The ninth Camino Brothers hike takes on the Camino Francés, the classic pilgrim road across northern Spain — 500 km from Saint-Jean-Pied-de-Port to León. Three weeks on the trail, September 28 to October 18, 2027.</p>
+            <p>Follow along here once the boots hit the trail.</p>
+          </div>
+        </div>
+
+        <figure class="c9-art">
+          <img src="photos/camino9-trail-quote.jpg" alt="Silhouette of a pilgrim carrying a fellow pilgrim on his back, with the words: No one will ever love you, hurt you, and beg you to come back like the trail. — Salem Djonde">
+        </figure>
       </div>
 
       <nav class="pager" aria-label="Camino pages">
