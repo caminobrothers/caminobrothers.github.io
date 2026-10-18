@@ -40,6 +40,17 @@
       .c9-layout { grid-template-columns: 1fr; }
     }
   </style>
+
+  <style>
+    /* Camino 9 countdown band */
+    .c9-count { margin: 2.4rem auto 0; max-width: 640px; text-align: center; background: var(--iron); color: var(--parchment); border: 1px solid var(--gold); border-radius: 10px; padding: 1.8rem 1.2rem 1.5rem; }
+    .c9-count-label { font-family: "Cinzel", serif; letter-spacing: 0.35em; text-transform: uppercase; font-size: 0.78rem; color: var(--gold-light); margin: 0; }
+    .c9-count-days { font-family: "Cinzel", serif; font-weight: 700; font-size: 4.2rem; line-height: 1.05; margin: 0.3rem 0 0; color: var(--cream); }
+    .c9-count-unit { font-family: "Cinzel", serif; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-size: 0.85rem; margin: 0.2rem 0 0; }
+    .c9-count-clock { color: var(--parchment-deep); margin: 0.7rem 0 0; font-size: 1rem; }
+    .c9-count-dates { margin: 1rem 0 0; }
+    .c9-count-dates span { display: inline-block; border: 1px solid var(--iron-soft); background: var(--iron-soft); border-radius: 6px; padding: 0.35rem 0.9rem; font-size: 0.95rem; color: var(--parchment); }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -90,6 +101,14 @@
         </figure>
       </div>
 
+      <section class="c9-count" aria-label="Countdown to Camino 9">
+        <p class="c9-count-label">The Countdown</p>
+        <p class="c9-count-days"><span id="c9-days">&mdash;</span></p>
+        <p class="c9-count-unit" id="c9-unit">days to go</p>
+        <p class="c9-count-clock" id="c9-clock">&nbsp;</p>
+        <p class="c9-count-dates"><span>Sep 28 &ndash; Oct 18, 2027 &middot; 21 days on the Franc&eacute;s</span></p>
+      </section>
+
       <nav class="pager" aria-label="Camino pages">
         <a href="camino-8.html">&larr; Camino: Tyrol (2026)</a>
         <a class="pager-next" href="index.html">Home &rarr;</a>
@@ -106,6 +125,43 @@
   </footer>
 
   <script src="gallery.js"></script>
+  <script>
+    (function () {
+      var start = new Date('2027-09-28T08:00:00+02:00').getTime();
+      var end = new Date('2027-10-18T23:59:59+02:00').getTime();
+      var daysEl = document.getElementById('c9-days');
+      var unitEl = document.getElementById('c9-unit');
+      var clockEl = document.getElementById('c9-clock');
+      if (!daysEl || !unitEl || !clockEl) return;
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      function tick() {
+        var now = Date.now();
+        if (now > end) {
+          daysEl.textContent = '500';
+          unitEl.textContent = 'km walked — Camino 9 complete';
+          clockEl.innerHTML = '&nbsp;';
+          return;
+        }
+        if (now >= start) {
+          var day = Math.floor((now - start) / 86400000) + 1;
+          daysEl.textContent = day;
+          unitEl.textContent = 'on the trail — day ' + day + ' of 21';
+          clockEl.innerHTML = '&nbsp;';
+          return;
+        }
+        var diff = start - now;
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor(diff % 86400000 / 3600000);
+        var m = Math.floor(diff % 3600000 / 60000);
+        var s = Math.floor(diff % 60000 / 1000);
+        daysEl.textContent = d;
+        unitEl.textContent = d === 1 ? 'day to go' : 'days to go';
+        clockEl.textContent = pad(h) + ' hrs · ' + pad(m) + ' min · ' + pad(s) + ' sec';
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "958cffad5d494302aedb4e0f008eed99"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
