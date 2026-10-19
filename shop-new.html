@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — Camino Brothers</title>
+  <meta name="description" content="Camino Brothers merch — t-shirts, hats and more pilgrim gear. Coming soon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Nav spread full-width inside the banner (desktop), matching the camino pages */
+    @media (min-width: 921px) {
+      .header-inner { max-width: none; flex-wrap: wrap; padding-left: 2rem; padding-right: 2rem; }
+      .main-nav { order: 3; flex: 1 1 100%; margin-left: 0; }
+      .main-nav ul { justify-content: space-between; flex-wrap: wrap; row-gap: 0.15rem; }
+      .main-nav a { white-space: nowrap; }
+    }
+    @media (min-width: 921px) and (max-width: 1450px) {
+      .main-nav a { font-size: 0.86rem; }
+    }
+  </style>
+
+  <style>
+    /* Banner: brand centred as a masthead (menu keeps its own full-width row below) */
+    .site-header .brand { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <style>
+    /* Ebook banner: price in the same crimson as the product-card prices */
+    .ebook-banner .eb-text p strong { color: var(--crimson); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><svg class="brand-cross" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg><span class="brand-text">CAMINO BROTHERS<small>PILGRIM JOURNAL</small></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">&#9776;</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="camino-1.html">Portuguese (2019)</a></li>
+          <li><a href="camino-2.html">Francés (2021)</a></li>
+          <li><a href="camino-3.html">Rheinsteig (2022)</a></li>
+          <li><a href="camino-4.html">Portuguese (2023)</a></li>
+          <li><a href="camino-5.html">Madeira (2024)</a></li>
+          <li><a href="camino-6.html">Jakobsweg (2024)</a></li>
+          <li><a href="camino-7.html">Norte / Francés (2025)</a></li>
+          <li><a href="camino-8.html">Tyrol (2026)</a></li>
+          <li><a href="camino-9.html">Coming Soon (2027)</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <h1 class="page-title">Shop</h1>
+      <div class="ornament" aria-hidden="true"><svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg></div>
+
+      <div class="story">
+        <p><strong>Camino Brothers gear — coming soon.</strong> T-shirts, hats and more, printed on demand and shipped to your door — plus our first ebook, <em>Buen Camino, Brother</em>. Here's a first look at the collection.</p>
+      </div>
+
+      <section class="ebook-banner" aria-label="Buen Camino, Brother ebook">
+        <img src="photos/merch/ebook-between-caminos.webp" alt="E-reader showing the Buen Camino, Brother ebook cover with crimson Templar cross and gold scallop shell" loading="lazy">
+        <div class="eb-text">
+          <h2>Buen Camino, Brother: A WhatsApp Story</h2>
+          <p>These are real conversations between Mike and Nicki — candid, unscripted, nothing polished for show. More than 19,000 messages and hundreds of photos since 2019: a friendship between Canada and Germany, kept alive one text at a time — the jokes, everyday life, and always the anticipation of the next camino. Eight caminos in, and many more years of walking — and texting — still to come. <strong>$11.99 CAD</strong></p>
+        </div>
+        <span class="eb-badge">Coming soon</span>
+      </section>
+
+      <h2 class="section-title">The Collection</h2>
+      <ul class="card-grid">
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/tee-cross.webp" alt="Black t-shirt with crimson Templar cross and gold Camino Brothers lettering" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Templar Cross Tee</h3>
+            <p class="price">$44 CAD</p>
+            <p>Crimson cross and Camino Brothers lettering. The classic. Black or white.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/tee-buen-camino.webp" alt="Black t-shirt with gold scallop shell and Buen Camino lettering" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Buen Camino Shell Tee</h3>
+            <p class="price">$44 CAD</p>
+            <p>Scallop shell and the pilgrim's greeting. Black or white.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/tee-routemap.webp" alt="Black t-shirt with gold Camino Frances route map from Saint-Jean-Pied-de-Port to Santiago de Compostela" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Camino Francés Route Map Tee</h3>
+            <p class="price">$44 CAD</p>
+            <p>The whole French Way in gold — Saint-Jean to Santiago, ~780 km. Black or white.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/tee-waymarker.webp" alt="Black t-shirt with blue waymarker tile, yellow scallop shell and yellow arrow, Buen Camino lettering" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Waymarker Tee</h3>
+            <p class="price">$44 CAD</p>
+            <p>The blue waymarker tile — shell and flecha, just like the trail. Black or white.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/cap-cross.webp" alt="Black baseball cap with crimson Templar cross embroidered on the front" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Embroidered Cap</h3>
+            <p class="price">$44 CAD</p>
+            <p>Crimson cross stitched on black. Trail-tested style.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/mug-taza.webp" alt="Small white Spanish-style coffee cup with crimson Templar cross" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Café Taza Mug</h3>
+            <p class="price">$24 CAD</p>
+            <p>Small Spanish-style coffee cup with the cross. For your café con leche.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/hoodie-cross.webp" alt="Black hoodie with crimson Templar cross and gold Camino Brothers lettering" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Templar Cross Hoodie</h3>
+            <p class="price">$62 CAD</p>
+            <p>Crimson cross, gold lettering on black. For cold trail mornings.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/keychain-cross.webp" alt="Metal keychain with crimson Templar cross medallion" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Cross Keychain</h3>
+            <p class="price">$22 CAD</p>
+            <p>Enamel Templar medallion on steel. Carry the camino with you.</p>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-photo"><img src="photos/merch/ebook-between-caminos.webp" alt="E-reader on a cafe table in Spain showing the Buen Camino, Brother ebook cover with crimson Templar cross and gold scallop shell" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge">Coming soon</span>
+            <h3>Buen Camino, Brother — The Ebook</h3>
+            <p class="price">$11.99 CAD</p>
+            <p>A WhatsApp story — two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019: the jokes, the photos, and the long wait between walks.</p>
+          </div>
+        </li>
+      </ul>
+
+      <nav class="pager" aria-label="Site pages">
+        <a href="camino-9.html">&larr; Camino 9: Coming Soon</a>
+        <a class="pager-next" href="index.html">Home &rarr;</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-brand">CAMINO BROTHERS</p>
+    <p>Buen camino &mdash; eight walked, and counting.</p>
+    <p><a href="mailto:mike@caminobrothers.com" style="color:#e8dcc0; text-decoration: underline;">mike@caminobrothers.com</a></p>
+    <p>&copy; 2026 Camino Brothers. All rights reserved.</p>
+  </footer>
+
+  <script src="gallery.js"></script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "958cffad5d494302aedb4e0f008eed99"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
