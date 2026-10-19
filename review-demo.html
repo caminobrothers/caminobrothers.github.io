@@ -239,6 +239,7 @@ function showWho(){
 function enterApp(){
   gate.classList.add("hidden"); app.classList.remove("hidden");
   document.getElementById("chatBtn").classList.remove("hidden");
+  document.getElementById("filter").value = "all";
   renderAll();
 }
 document.getElementById("unlockBtn").addEventListener("click", tryUnlock);
@@ -249,9 +250,6 @@ document.querySelectorAll(".who-btn").forEach(b => b.addEventListener("click", (
 document.getElementById("switchBtn").addEventListener("click", () => {
   state.who = state.who === "mike" ? "nicki" : "mike"; save(); renderAll();
 });
-if(state.unlocked && state.who) enterApp();
-else if(state.unlocked) showWho();
-
 /* ---------- render ---------- */
 const list = document.getElementById("list");
 function renderAll(){
@@ -397,6 +395,10 @@ document.getElementById("doneNicki").addEventListener("click", () => { state.don
 document.getElementById("resetBtn").addEventListener("click", () => {
   if(confirm("Clear all marks, suggestions and chat on this device?")){ localStorage.removeItem(LS_KEY); location.reload(); }
 });
+
+/* ---------- auto-enter for returning visitors (must run LAST: everything above has to exist first) ---------- */
+if(state.unlocked && state.who) enterApp();
+else if(state.unlocked) showWho();
 </script>
 </body>
 </html>
