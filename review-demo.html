@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Book Review — Chapter 1 (Demo) · Camino Brothers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2b2118; --ink-soft:#6b5d4f; --paper:#f6efdd; --card:#fffdf6; --gold:#C9A227;
+  --gold-dark:#8a6d1a; --mike:#2f6fed; --nicki:#C9A227; --red:#a31621; --line:#e0d3ac;
+  --green:#2e7d32;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+h1,h2,h3{font-family:Cinzel,Georgia,serif}
+button{font:inherit;cursor:pointer}
+.hidden{display:none !important}
+
+/* ---------- gate ---------- */
+#gate{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:28px 16px 60px}
+.gate-card{max-width:640px;width:100%;background:var(--card);border:2px solid var(--gold);border-radius:14px;padding:28px 26px;box-shadow:0 6px 24px rgba(80,60,10,.15)}
+.gate-card h1{margin:0 0 2px;font-size:30px;color:var(--gold-dark);text-align:center}
+.gate-sub{text-align:center;color:var(--ink-soft);margin:0 0 18px;font-size:16px}
+.gate-card h2{font-size:19px;margin:20px 0 6px;color:var(--gold-dark)}
+.gate-card p{margin:0 0 8px;line-height:1.45}
+.gate-card ol{margin:6px 0 8px;padding-left:22px;line-height:1.5}
+.gate-card ol li{margin-bottom:7px}
+.demo-note{background:#fdf3d7;border:1px solid var(--gold);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.pw-row{display:flex;gap:10px;margin-top:18px}
+.pw-row input{flex:1;padding:13px 14px;font-size:17px;border:2px solid var(--line);border-radius:10px;background:#fff}
+.pw-row button{background:var(--gold);color:#fff;border:0;border-radius:10px;padding:13px 22px;font-weight:700;font-size:17px}
+.pw-err{color:var(--red);font-weight:600;margin-top:10px;min-height:20px}
+.who-row{display:flex;gap:12px;margin-top:8px}
+.who-btn{flex:1;padding:16px;border-radius:12px;border:3px solid var(--line);background:#fff;font-size:19px;font-weight:700}
+.who-btn.mike{border-color:var(--mike);color:var(--mike)}
+.who-btn.nicki{border-color:var(--nicki);color:var(--gold-dark)}
+
+/* ---------- app ---------- */
+header.top{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:2px solid var(--gold);padding:10px 14px}
+.top h1{font-size:19px;margin:0;color:var(--gold-dark)}
+.top .dates{color:var(--ink-soft);font-size:14px}
+.demonote{font-size:13px;color:var(--ink-soft)}
+.score{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:3px 11px;font-size:13.5px;font-weight:600}
+.chip.in{border-color:var(--green);color:var(--green)}
+.chip.out{border-color:var(--red);color:var(--red)}
+.chip.disp{border-color:var(--red);background:#fdecec;color:var(--red)}
+.chip.sens{border-color:var(--gold-dark);color:var(--gold-dark)}
+.dots{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.dot{width:16px;height:16px;border-radius:50%;border:2px solid #c9bfa5;background:#fff;padding:0}
+.dot.in{background:var(--green);border-color:var(--green)}
+.dot.out{background:#c9c9c9;border-color:#a8a8a8}
+.dot.disp{background:var(--red);border-color:var(--red)}
+.dot.wait{background:#f3c969;border-color:var(--gold-dark)}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.toolbar select{padding:9px;border-radius:9px;border:2px solid var(--line);background:#fff;font-size:15px}
+.toolbar button,.done-btn{padding:9px 14px;border-radius:9px;border:2px solid var(--line);background:#fff;font-weight:600}
+.done-btn.on-mike{background:var(--mike);border-color:var(--mike);color:#fff}
+.done-btn.on-nicki{background:var(--nicki);border-color:var(--nicki);color:#fff}
+.who-switch{margin-left:auto;font-size:14px;color:var(--ink-soft)}
+.who-switch b.mike{color:var(--mike)} .who-switch b.nicki{color:var(--gold-dark)}
+.lockbanner{margin:10px 14px 0;background:#e6f4e6;border:2px solid var(--green);color:var(--green);border-radius:10px;padding:10px 14px;font-weight:700;text-align:center}
+main{max-width:760px;margin:0 auto;padding:14px}
+.daysep{text-align:center;color:var(--ink-soft);font-weight:700;margin:20px 0 10px;font-size:14px;letter-spacing:.04em}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:12px}
+.card.disputed{border-color:var(--red)}
+.card.vetoed{opacity:.62}
+.meta{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.who-name{font-weight:700}
+.who-name.mike{color:var(--mike)} .who-name.nicki{color:var(--gold-dark)}
+.ref{color:var(--ink-soft);font-size:13px}
+.when{color:var(--ink-soft);font-size:13.5px;margin-left:auto}
+.sens-badge{background:#fdf3d7;border:1.5px solid var(--gold-dark);color:var(--gold-dark);border-radius:999px;padding:1px 9px;font-size:12.5px;font-weight:700}
+.body{margin:8px 0 4px;font-size:17px;line-height:1.45;white-space:pre-wrap;word-wrap:break-word}
+.body.cut{text-decoration:line-through;text-decoration-thickness:2px}
+.media-chip{display:inline-block;background:#efe7cd;border:1.5px solid var(--gold);border-radius:10px;padding:8px 14px;font-weight:600;margin:6px 0 2px}
+.sens-reason{font-size:13.5px;color:var(--gold-dark);margin-top:2px}
+.marks{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.mark-chip{border-radius:999px;padding:2px 10px;font-size:13px;font-weight:700;border:2px solid}
+.mark-chip.mike{border-color:var(--mike);color:var(--mike)} .mark-chip.mike.set{background:var(--mike);color:#fff}
+.mark-chip.nicki{border-color:var(--nicki);color:var(--gold-dark)} .mark-chip.nicki.set{background:var(--nicki);color:#fff}
+.status-line{font-size:13.5px;font-weight:700;margin-top:6px}
+.status-line.in{color:var(--green)} .status-line.out{color:var(--red)} .status-line.disp{color:var(--red)} .status-line.wait{color:var(--gold-dark)}
+.actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.actions button{flex:1;min-width:86px;padding:11px;border-radius:10px;border:2px solid var(--line);background:#fff;font-weight:700;font-size:15.5px}
+.actions button.keep.sel{border-color:var(--green);background:#e6f4e6;color:var(--green)}
+.actions button.cut.sel{border-color:#777;background:#eee;color:#333}
+.actions button.veto.sel{border-color:var(--red);background:#fdecec;color:var(--red)}
+.sub-actions{display:flex;gap:8px;margin-top:8px}
+.sub-actions button{padding:7px 12px;border-radius:9px;border:1.5px solid var(--line);background:#fff;font-size:14px;font-weight:600}
+.sugg{margin-top:8px}
+.sugg-item{border-left:4px solid;padding:6px 10px;margin-top:6px;background:#fff;border-radius:0 8px 8px 0;font-size:15px}
+.sugg-item.mike{border-color:var(--mike)} .sugg-item.nicki{border-color:var(--nicki)}
+.sugg-form{display:flex;gap:8px;margin-top:8px}
+.sugg-form input{flex:1;padding:9px;border:2px solid var(--line);border-radius:9px;font-size:15px}
+.sugg-form button{padding:9px 14px;border-radius:9px;border:0;background:var(--gold);color:#fff;font-weight:700}
+.empty-note{background:var(--card);border:2px dashed var(--gold);border-radius:12px;padding:18px;text-align:center;color:var(--ink-soft)}
+footer{max-width:760px;margin:0 auto;padding:8px 14px 90px;color:var(--ink-soft);font-size:13.5px;text-align:center}
+footer button{background:none;border:0;color:var(--ink-soft);text-decoration:underline}
+
+/* ---------- chat ---------- */
+#chatBtn{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--gold);color:#fff;border:0;border-radius:999px;padding:14px 20px;font-weight:700;box-shadow:0 4px 16px rgba(80,60,10,.3);font-size:16px}
+#chatPanel{position:fixed;right:12px;bottom:76px;z-index:30;width:min(360px,calc(100vw - 24px));max-height:60vh;background:var(--card);border:2px solid var(--gold);border-radius:14px;display:flex;flex-direction:column;box-shadow:0 8px 30px rgba(80,60,10,.25)}
+#chatPanel h3{margin:0;padding:12px 14px;border-bottom:1.5px solid var(--line);font-size:16px;color:var(--gold-dark)}
+#chatMsgs{overflow-y:auto;padding:10px 12px;flex:1}
+.chat-msg{margin-bottom:10px;font-size:15px}
+.chat-msg .cn{font-weight:700}.chat-msg .cn.mike{color:var(--mike)}.chat-msg .cn.nicki{color:var(--gold-dark)}
+.chat-msg .ct{color:var(--ink-soft);font-size:12px}
+.chat-msg .cpin{display:inline-block;background:#efe7cd;border-radius:6px;padding:0 6px;font-weight:700;font-size:12.5px;margin-right:4px}
+#chatForm{display:flex;gap:8px;padding:10px;border-top:1.5px solid var(--line)}
+#chatForm input{flex:1;padding:10px;border:2px solid var(--line);border-radius:9px;font-size:15px}
+#chatForm button{padding:10px 16px;border:0;border-radius:9px;background:var(--gold);color:#fff;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ================= GATE ================= -->
+<div id="gate">
+  <div class="gate-card">
+    <h1>Buen Camino, Brother</h1>
+    <p class="gate-sub">Book review page — Chapter 1 · <b>Demo</b></p>
+
+    <div id="pwStep">
+      <h2>What is this page?</h2>
+      <p>This is the review page for our book, <i>Buen Camino, Brother: A WhatsApp Story</i>. Chapter 1 is our WhatsApp chat from Camino 1 (the Portuguese, October 2019). When the book starts for real, this is where we read through each chapter together and decide what stays and what goes — one chapter at a time.</p>
+      <h2>How reviewing works</h2>
+      <ol>
+        <li>Enter the password below, then tap your name. <b style="color:var(--mike)">Mike is blue</b>, <b style="color:var(--gold-dark)">Nicki is gold</b> — so you can always see whose mark is whose. You can switch names any time to try the other side.</li>
+        <li>Read through the messages. On each one, tap <b>Keep</b> (fine to print), <b>Cut</b> (suggest leaving it out) or <b>Veto</b> (never in print — no reason needed, and a veto from either of us wins). Nothing is ever deleted; a cut can always be undone.</li>
+        <li>Messages marked <b>⚑ Sensitive</b> touch on family, health, money or other people. They stay <b>out</b> unless we <b>both</b> tap Keep.</li>
+        <li>You can also <b>suggest different wording</b> under any message, and tap <b>Discuss</b> to talk about a specific one in the chat box.</li>
+        <li>When you've been through the whole chapter, tap <b>“I'm done”</b> at the top. A chapter counts as finished only when we both have.</li>
+      </ol>
+      <p class="demo-note"><b>Demo note:</b> this copy is just to show how it will work. Marks you make here stay on this device and don't reach the other person yet — the real page will sync us live.</p>
+      <div class="pw-row">
+        <input id="pw" type="password" placeholder="Password" autocomplete="off">
+        <button id="unlockBtn">Unlock</button>
+      </div>
+      <div class="pw-err" id="pwErr"></div>
+    </div>
+
+    <div id="whoStep" class="hidden">
+      <h2>Who's reviewing?</h2>
+      <p>Tap your name. You can switch later — that's part of the demo.</p>
+      <div class="who-row">
+        <button class="who-btn mike" data-who="mike">Mike</button>
+        <button class="who-btn nicki" data-who="nicki">Nicki</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app" class="hidden">
+  <header class="top">
+    <h1>Chapter 1 · On the Way — Camino 1: Portuguese, Porto → Santiago</h1>
+    <div class="dates">Oct 2–12, 2019 · 43 messages · <span class="demonote">Demo — marks stay on this device only.</span></div>
+    <div class="score" id="scoreboard"></div>
+    <div class="dots" id="dots"></div>
+    <div class="toolbar">
+      <select id="filter">
+        <option value="all">All messages</option>
+        <option value="marked">Only marked</option>
+        <option value="disputed">Disputed</option>
+        <option value="sens">⚑ Needs both</option>
+        <option value="editor">Editor's cuts</option>
+      </select>
+      <button id="jumpBtn">Jump to first undecided</button>
+      <button class="done-btn" id="doneMike">Mike: I'm done</button>
+      <button class="done-btn" id="doneNicki">Nicki: I'm done</button>
+      <span class="who-switch">Reviewing as <b id="whoName"></b> · <button id="switchBtn" style="border:0;background:none;text-decoration:underline;color:inherit;padding:0">switch</button></span>
+    </div>
+  </header>
+  <div class="lockbanner hidden" id="lockBanner">Both done — this chapter is ready to lock. 🎉</div>
+  <main id="list"></main>
+  <footer>Buen Camino, Brother — review demo. Nothing here is published; the real review page comes later.<br>
+  <button id="resetBtn">Reset the demo (clear all marks on this device)</button></footer>
+</div>
+
+<button id="chatBtn" class="hidden">💬 Discuss</button>
+<div id="chatPanel" class="hidden">
+  <h3>Discuss — workshop chat (never book content)</h3>
+  <div id="chatMsgs"></div>
+  <form id="chatForm"><input id="chatInput" placeholder="Write a note…" autocomplete="off"><button type="submit">Send</button></form>
+</div>
+
+<script>
+const PASSWORD = "buencamino2019!";
+const ITEMS = [{"ref": 1, "date": "2019-10-02", "time": "4:40 AM", "who": "Mike", "text": "Gutton Morgan", "media": null, "photo_ref": null}, {"ref": 2, "date": "2019-10-02", "time": "4:41 AM", "who": "Nicki", "text": "\u270c\ud83e\udd7e\ud83e\udd7e\ud83e\udd7e\ud83e\udd7e\ud83d\ude0e", "media": null, "photo_ref": null}, {"ref": 3, "date": "2019-10-03", "time": "2:12 PM", "who": "Mike", "text": "video omitted", "media": "video", "photo_ref": null}, {"ref": 4, "date": "2019-10-03", "time": "2:19 PM", "who": "Mike", "text": "image omitted", "media": "image", "photo_ref": 1}, {"ref": 5, "date": "2019-10-03", "time": "2:21 PM", "who": "Mike", "text": "No honey. They eat bees video omitted", "media": "video", "photo_ref": null}, {"ref": 6, "date": "2019-10-04", "time": "3:42 PM", "who": "Mike", "text": "Camino Brook Trouts image omitted", "media": "image", "photo_ref": 2}, {"ref": 7, "date": "2019-10-04", "time": "3:45 PM", "who": "Mike", "text": "Camino Brook Trouts image omitted", "media": "image", "photo_ref": 3}, {"ref": 8, "date": "2019-10-04", "time": "3:45 PM", "who": "Nicki", "text": "video omitted", "media": "video", "photo_ref": null}, {"ref": 9, "date": "2019-10-04", "time": "7:49 PM", "who": "Mike", "text": "Please send that last video", "media": null, "photo_ref": null}, {"ref": 10, "date": "2019-10-04", "time": "8:11 PM", "who": "Nicki", "text": "video omitted", "media": "video", "photo_ref": null}, {"ref": 11, "date": "2019-10-05", "time": "3:50 AM", "who": "Nicki", "text": "audio omitted", "media": "audio", "photo_ref": null}, {"ref": 12, "date": "2019-10-05", "time": "3:54 AM", "who": "Mike", "text": "\ud83d\udc4c\ud83d\udc4c", "media": null, "photo_ref": null}, {"ref": 13, "date": "2019-10-05", "time": "5:13 AM", "who": "Nicki", "text": "audio omitted", "media": "audio", "photo_ref": null}, {"ref": 14, "date": "2019-10-05", "time": "6:52 AM", "who": "Nicki", "text": "image omitted", "media": "image", "photo_ref": 4}, {"ref": 15, "date": "2019-10-05", "time": "4:37 PM", "who": "Mike", "text": "Brooke Trout King image omitted", "media": "image", "photo_ref": 5}, {"ref": 16, "date": "2019-10-05", "time": "5:41 PM", "who": "Nicki", "text": "image omitted", "media": "image", "photo_ref": 6}, {"ref": 17, "date": "2019-10-05", "time": "6:24 PM", "who": "Nicki", "text": "image omitted", "media": "image", "photo_ref": 7}, {"ref": 18, "date": "2019-10-07", "time": "12:00 PM", "who": "Nicki", "text": "audio omitted", "media": "audio", "photo_ref": null}, {"ref": 19, "date": "2019-10-07", "time": "12:00 PM", "who": "Mike", "text": "Yes. Both rooms in my name", "media": null, "photo_ref": null}, {"ref": 20, "date": "2019-10-07", "time": "12:15 PM", "who": "Nicki", "text": "Missed voice call", "media": null, "photo_ref": null}, {"ref": 21, "date": "2019-10-07", "time": "12:16 PM", "who": "Nicki", "text": "audio omitted", "media": "audio", "photo_ref": null}, {"ref": 22, "date": "2019-10-07", "time": "2:01 PM", "who": "Nicki", "text": "audio omitted", "media": "audio", "photo_ref": null}, {"ref": 23, "date": "2019-10-07", "time": "2:01 PM", "who": "Mike", "text": "Yes. I am in lobby now", "media": null, "photo_ref": null}, {"ref": 24, "date": "2019-10-07", "time": "2:02 PM", "who": "Mike", "text": "Early is good haha", "media": null, "photo_ref": null}, {"ref": 25, "date": "2019-10-07", "time": "2:02 PM", "who": "Nicki", "text": "audio omitted", "media": "audio", "photo_ref": null}, {"ref": 26, "date": "2019-10-07", "time": "2:02 PM", "who": "Mike", "text": "Yes", "media": null, "photo_ref": null}, {"ref": 27, "date": "2019-10-08", "time": "2:47 AM", "who": "Mike", "text": "I am ready when you guys are", "media": null, "photo_ref": null}, {"ref": 28, "date": "2019-10-08", "time": "2:48 AM", "who": "Nicki", "text": "08.30... to breakfast?", "media": null, "photo_ref": null}, {"ref": 29, "date": "2019-10-08", "time": "2:49 AM", "who": "Mike", "text": "Yes ok", "media": null, "photo_ref": null}, {"ref": 30, "date": "2019-10-08", "time": "3:05 PM", "who": "Nicki", "text": "Missed voice call", "media": null, "photo_ref": null}, {"ref": 31, "date": "2019-10-08", "time": "3:06 PM", "who": "Nicki", "text": "Missed voice call", "media": null, "photo_ref": null}, {"ref": 32, "date": "2019-10-08", "time": "3:09 PM", "who": "Nicki", "text": "Missed voice call", "media": null, "photo_ref": null}, {"ref": 33, "date": "2019-10-08", "time": "1:45 PM", "who": "Nicki", "text": "Hi Mike, i go with Dennis to the Medical Center... See you soon\u270c", "media": null, "photo_ref": null, "sensitive": "Dennis / medical center (health + third party)"}, {"ref": 34, "date": "2019-10-08", "time": "3:05 PM", "who": "Nicki", "text": "audio omitted", "media": "audio", "photo_ref": null}, {"ref": 35, "date": "2019-10-09", "time": "4:34 AM", "who": "Nicki", "text": "image omitted", "media": "image", "photo_ref": 8}, {"ref": 36, "date": "2019-10-09", "time": "4:36 AM", "who": "Mike", "text": "image omitted", "media": "image", "photo_ref": 9}, {"ref": 37, "date": "2019-10-11", "time": "5:06 PM", "who": "Nicki", "text": "image omitted", "media": "image", "photo_ref": 10}, {"ref": 38, "date": "2019-10-12", "time": "6:53 PM", "who": "Nicki", "text": "Hi Mike, Lisbon good arrived? I am at Home and in the Pub with my Familie...\ud83d\ude0a\u270c\ud83d\ude18 image omitted", "media": "image", "photo_ref": 11}, {"ref": 39, "date": "2019-10-12", "time": "6:56 PM", "who": "Mike", "text": "Hi Nickie. I just got to my room in Lisbon. 9 hrs on a bus. Lots of bars close by. Have fun with friends and family. Miss you guys. Will send pics soon image omitted", "media": "image", "photo_ref": 12}, {"ref": 40, "date": "2019-10-12", "time": "6:57 PM", "who": "Mike", "text": "Brook Trout. Hahaha", "media": null, "photo_ref": null}, {"ref": 41, "date": "2019-10-12", "time": "7:02 PM", "who": "Nicki", "text": "\ud83e\udd18... its not so easy for me at the Moment, my thoughts are very confusing and have not landed yet. We write tomorrow and make sure the fins stay wet... Brook Trout...\ud83d\ude02\ud83d\ude02\ud83d\ude02", "media": null, "photo_ref": null}, {"ref": 42, "date": "2019-10-12", "time": "7:03 PM", "who": "Mike", "text": "image omitted", "media": "image", "photo_ref": 13}, {"ref": 43, "date": "2019-10-12", "time": "7:03 PM", "who": "Mike", "text": "image omitted", "media": "image", "photo_ref": 14}];
+const LS_KEY = "cb-review-demo-ch1-v1";
+const state = load() || {marks:{}, suggestions:{}, done:{mike:false, nicki:false}, chat:[], who:null, unlocked:false};
+let pinnedRef = null;
+
+function load(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)); }catch(e){ return null; } }
+function save(){ localStorage.setItem(LS_KEY, JSON.stringify(state)); }
+function mark(ref){ return state.marks[ref] || {mike:null, nicki:null}; }
+
+function statusOf(it){
+  const m = mark(it.ref);
+  if(m.mike === "veto" || m.nicki === "veto") return {k:"vetoed", label:"Vetoed — out, for good", cls:"out"};
+  if(it.sensitive){
+    if(m.mike === "keep" && m.nicki === "keep") return {k:"in", label:"⚑ Settled — IN (both kept it)", cls:"in"};
+    if((m.mike === "keep" && m.nicki === "cut") || (m.mike === "cut" && m.nicki === "keep")) return {k:"disputed", label:"⚑ Disputed — one Keep, one Cut (stays out unless you agree)", cls:"disp"};
+    if(m.mike === "cut" && m.nicki === "cut") return {k:"out", label:"⚑ Out — both cut", cls:"out"};
+    if(m.mike === "cut" || m.nicki === "cut") return {k:"out", label:"⚑ Out — sensitive items need both Keeps", cls:"out"};
+    return {k:"sens", label:"⚑ Needs both — stays OUT unless both Keep", cls:"wait"};
+  }
+  if(m.mike === "keep" && m.nicki === "keep") return {k:"in", label:"Settled — IN", cls:"in"};
+  if(m.mike === "cut" && m.nicki === "cut") return {k:"out", label:"Settled — OUT (cut by both)", cls:"out"};
+  if(m.mike && m.nicki) return {k:"disputed", label:"Disputed — one Keep, one Cut", cls:"disp"};
+  if(m.mike || m.nicki) return {k:"wait", label:"Waiting on the other", cls:"wait"};
+  return {k:"undecided", label:"Undecided", cls:"wait"};
+}
+
+function fmtDate(iso){
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const p = iso.split("-"); return months[+p[1]-1] + " " + (+p[2]) + ", " + p[0];
+}
+function mediaChip(it){
+  if(!it.media) return "";
+  const ic = {image:"📷 Photo " + (it.photo_ref || ""), video:"🎬 Video", audio:"🎙️ Voice message", sticker:"🖼️ Sticker", document:"📄 Document", GIF:"🖼️ GIF"}[it.media] || "📎 Media";
+  return '<div><span class="media-chip">' + ic + ' — sent in the chat</span></div>';
+}
+
+/* ---------- gate ---------- */
+const gate = document.getElementById("gate"), app = document.getElementById("app");
+function tryUnlock(){
+  const v = document.getElementById("pw").value.trim();
+  if(v === PASSWORD){ state.unlocked = true; save(); showWho(); }
+  else document.getElementById("pwErr").textContent = "That's not the password — check with Mike and try again.";
+}
+function showWho(){
+  document.getElementById("pwStep").classList.add("hidden");
+  document.getElementById("whoStep").classList.remove("hidden");
+}
+function enterApp(){
+  gate.classList.add("hidden"); app.classList.remove("hidden");
+  document.getElementById("chatBtn").classList.remove("hidden");
+  renderAll();
+}
+document.getElementById("unlockBtn").addEventListener("click", tryUnlock);
+document.getElementById("pw").addEventListener("keydown", e => { if(e.key === "Enter") tryUnlock(); });
+document.querySelectorAll(".who-btn").forEach(b => b.addEventListener("click", () => {
+  state.who = b.dataset.who; save(); enterApp();
+}));
+document.getElementById("switchBtn").addEventListener("click", () => {
+  state.who = state.who === "mike" ? "nicki" : "mike"; save(); renderAll();
+});
+if(state.unlocked && state.who) enterApp();
+else if(state.unlocked) showWho();
+
+/* ---------- render ---------- */
+const list = document.getElementById("list");
+function renderAll(){
+  document.getElementById("whoName").textContent = state.who === "mike" ? "Mike" : "Nicki";
+  document.getElementById("whoName").className = state.who;
+  renderScore(); renderList(); renderChat();
+  const dm = document.getElementById("doneMike"), dn = document.getElementById("doneNicki");
+  dm.className = "done-btn" + (state.done.mike ? " on-mike" : "");
+  dn.className = "done-btn" + (state.done.nicki ? " on-nicki" : "");
+  dm.textContent = "Mike: " + (state.done.mike ? "done ✓" : "I'm done");
+  dn.textContent = "Nicki: " + (state.done.nicki ? "done ✓" : "I'm done");
+  document.getElementById("lockBanner").classList.toggle("hidden", !(state.done.mike && state.done.nicki));
+}
+function renderScore(){
+  const c = {in:0, out:0, vetoed:0, disputed:0, wait:0, undecided:0, sens:0};
+  ITEMS.forEach(it => { c[statusOf(it).k]++; });
+  document.getElementById("scoreboard").innerHTML =
+    '<span class="chip in">In: ' + c.in + '</span>' +
+    '<span class="chip out">Out: ' + (c.out + c.vetoed) + '</span>' +
+    '<span class="chip disp">Disputed: ' + c.disputed + '</span>' +
+    '<span class="chip sens">⚑ Needs both: ' + c.sens + '</span>' +
+    '<span class="chip">Still to look at: ' + (c.wait + c.undecided) + '</span>' +
+    '<span class="chip">' + ITEMS.length + ' messages</span>';
+  document.getElementById("dots").innerHTML = ITEMS.map(it => {
+    const k = statusOf(it).k;
+    const cls = k === "in" ? "in" : (k === "out" || k === "vetoed") ? "out" : k === "disputed" ? "disp" : "wait";
+    return '<button class="dot ' + cls + '" title="#' + it.ref + '" data-jump="' + it.ref + '"></button>';
+  }).join("");
+  document.querySelectorAll("[data-jump]").forEach(d => d.addEventListener("click", () => jumpTo(+d.dataset.jump)));
+}
+function jumpTo(ref){
+  const el = document.getElementById("item-" + ref);
+  if(el) el.scrollIntoView({behavior:"smooth", block:"center"});
+}
+function visible(it){
+  const f = document.getElementById("filter").value, st = statusOf(it), m = mark(it.ref);
+  if(f === "all") return true;
+  if(f === "marked") return !!(m.mike || m.nicki) || (state.suggestions[it.ref] || []).length > 0;
+  if(f === "disputed") return st.k === "disputed";
+  if(f === "sens") return !!it.sensitive;
+  if(f === "editor") return false;
+  return true;
+}
+function markChip(person, val){
+  if(!val) return "";
+  const name = person === "mike" ? "Mike" : "Nicki";
+  const word = val === "keep" ? "Keep" : val === "cut" ? "Cut" : "Veto";
+  return '<span class="mark-chip ' + person + ' set">' + name + ': ' + word + '</span>';
+}
+function renderList(){
+  const f = document.getElementById("filter").value;
+  if(f === "editor"){
+    list.innerHTML = '<div class="empty-note">Chapter 1 has no editor\'s cuts — all 43 messages were kept as written. The editor\'s cuts start appearing from Chapter 2 on; they arrive already marked Cut, and a Keep from either of you rescues them.</div>';
+    return;
+  }
+  let html = "", lastDate = "";
+  ITEMS.forEach(it => {
+    if(!visible(it)) return;
+    if(it.date !== lastDate){ html += '<div class="daysep">' + fmtDate(it.date) + '</div>'; lastDate = it.date; }
+    const st = statusOf(it), m = mark(it.ref);
+    const cutCls = (st.k === "out" || st.k === "vetoed" || st.k === "disputed") ? " cut" : "";
+    const suggs = (state.suggestions[it.ref] || []).map(s =>
+      '<div class="sugg-item ' + s.who + '"><b>' + (s.who === "mike" ? "Mike" : "Nicki") + ' suggests:</b> ' + escapeHtml(s.text) + '</div>').join("");
+    html += '<div class="card' + (st.k === "disputed" ? " disputed" : "") + (st.k === "vetoed" ? " vetoed" : "") + '" id="item-' + it.ref + '">' +
+      '<div class="meta"><span class="who-name ' + it.who.toLowerCase() + '">' + it.who + '</span>' +
+      '<span class="ref">#' + it.ref + '</span>' +
+      (it.sensitive ? '<span class="sens-badge">⚑ Sensitive</span>' : "") +
+      '<span class="when">' + it.time + '</span></div>' +
+      (it.media ? mediaChip(it) : '<div class="body' + cutCls + '">' + escapeHtml(it.text || "") + '</div>') +
+      (it.sensitive ? '<div class="sens-reason">⚑ ' + escapeHtml(it.sensitive) + ' — stays out unless both Keep.</div>' : "") +
+      '<div class="marks">' + markChip("mike", m.mike) + markChip("nicki", m.nicki) + '</div>' +
+      '<div class="status-line ' + st.cls + '">' + st.label + '</div>' +
+      '<div class="actions">' +
+        '<button class="keep' + (m[state.who] === "keep" ? " sel" : "") + '" data-act="keep" data-ref="' + it.ref + '">✓ Keep</button>' +
+        '<button class="cut' + (m[state.who] === "cut" ? " sel" : "") + '" data-act="cut" data-ref="' + it.ref + '">✂ Cut</button>' +
+        '<button class="veto' + (m[state.who] === "veto" ? " sel" : "") + '" data-act="veto" data-ref="' + it.ref + '">⛔ Veto</button>' +
+      '</div>' +
+      '<div class="sub-actions"><button data-sugg="' + it.ref + '">✎ Suggest edit</button><button data-discuss="' + it.ref + '">💬 Discuss</button></div>' +
+      '<div class="sugg" id="sugg-' + it.ref + '">' + suggs + '</div>' +
+    '</div>';
+  });
+  list.innerHTML = html || '<div class="empty-note">Nothing matches this filter.</div>';
+  list.querySelectorAll("[data-act]").forEach(b => b.addEventListener("click", () => {
+    const ref = b.dataset.ref, act = b.dataset.act;
+    const m = mark(ref);
+    m[state.who] = (m[state.who] === act) ? null : act;
+    state.marks[ref] = m; save(); renderAll();
+  }));
+  list.querySelectorAll("[data-sugg]").forEach(b => b.addEventListener("click", () => {
+    const box = document.getElementById("sugg-" + b.dataset.sugg);
+    if(box.querySelector("form")) return;
+    const form = document.createElement("form");
+    form.className = "sugg-form";
+    form.innerHTML = '<input placeholder="Your suggested wording…" autocomplete="off"><button type="submit">Add</button>';
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const v = form.querySelector("input").value.trim();
+      if(!v) return;
+      (state.suggestions[b.dataset.sugg] = state.suggestions[b.dataset.sugg] || []).push({who: state.who, text: v});
+      save(); renderAll();
+    });
+    box.appendChild(form);
+    form.querySelector("input").focus();
+  }));
+  list.querySelectorAll("[data-discuss]").forEach(b => b.addEventListener("click", () => {
+    pinnedRef = +b.dataset.discuss;
+    document.getElementById("chatPanel").classList.remove("hidden");
+    document.getElementById("chatInput").placeholder = "About #" + pinnedRef + "…";
+    document.getElementById("chatInput").focus();
+  }));
+}
+function escapeHtml(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+/* ---------- chat ---------- */
+function renderChat(){
+  const box = document.getElementById("chatMsgs");
+  box.innerHTML = state.chat.length ? state.chat.map(c =>
+    '<div class="chat-msg"><span class="cn ' + c.who + '">' + (c.who === "mike" ? "Mike" : "Nicki") + '</span> <span class="ct">' + c.t + '</span><br>' +
+    (c.pin ? '<span class="cpin">#' + c.pin + '</span>' : "") + escapeHtml(c.text) + '</div>').join("")
+    : '<div class="chat-msg" style="color:var(--ink-soft)">No notes yet. Tap Discuss on any message to pin it here.</div>';
+  box.scrollTop = box.scrollHeight;
+}
+document.getElementById("chatBtn").addEventListener("click", () => {
+  document.getElementById("chatPanel").classList.toggle("hidden");
+});
+document.getElementById("chatForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const inp = document.getElementById("chatInput"), v = inp.value.trim();
+  if(!v) return;
+  state.chat.push({who: state.who, text: v, pin: pinnedRef, t: new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"})});
+  pinnedRef = null; inp.value = ""; inp.placeholder = "Write a note…";
+  save(); renderChat();
+});
+
+/* ---------- toolbar ---------- */
+document.getElementById("filter").addEventListener("change", renderList);
+document.getElementById("jumpBtn").addEventListener("click", () => {
+  const t = ITEMS.find(it => { const k = statusOf(it).k; return k === "undecided" || k === "wait"; });
+  if(t){ jumpTo(t.ref); } else { alert("Nothing undecided — nice work!"); }
+});
+document.getElementById("doneMike").addEventListener("click", () => { state.done.mike = !state.done.mike; save(); renderAll(); });
+document.getElementById("doneNicki").addEventListener("click", () => { state.done.nicki = !state.done.nicki; save(); renderAll(); });
+document.getElementById("resetBtn").addEventListener("click", () => {
+  if(confirm("Clear all marks, suggestions and chat on this device?")){ localStorage.removeItem(LS_KEY); location.reload(); }
+});
+</script>
+</body>
+</html>
