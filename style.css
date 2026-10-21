@@ -492,12 +492,12 @@ h1, h2, h3 {
 }
 .ebook-banner .eb-text { flex: 1 1 auto; min-width: 0; }
 .ebook-banner h2 {
-  font-size: 1.12rem;
+  font-size: 1.18rem;
   color: var(--gold-light);
   margin: 0;
   letter-spacing: 0.06em;
 }
-.ebook-banner p { margin: 0.15rem 0 0; font-size: 0.92rem; }
+.ebook-banner p { margin: 0.15rem 0 0; font-size: 0.97rem; }
 .ebook-banner .eb-badge {
   flex: none;
   font-size: 0.7rem;
