@@ -1,4 +1,4 @@
-/* Camino Brothers — Knights Templar theme
+/* Camino Brothers - Knights Templar theme
    Palette: iron #1e1a16 · parchment #ece0c8 · crimson #a31621 · gold #b08d3e
    Type: Cinzel (headings) · DM Sans (body) */
 
@@ -728,7 +728,7 @@ h1, h2, h3 {
 .dispatches-copy { margin: 0 auto 1.4rem; max-width: 34rem; color: var(--cream); }
 .dispatches-form { max-width: 30rem; margin: 0 auto; }
 .dispatches-small { font-size: 0.82rem; color: #cbb98f; margin: 1rem 0 0; }
-/* EmailOctopus injected form — dressed to match the site */
+/* EmailOctopus injected form - dressed to match the site */
 .dispatches-form form { margin: 0; }
 .dispatches-form label { color: var(--cream); }
 .dispatches-form input[type="email"],

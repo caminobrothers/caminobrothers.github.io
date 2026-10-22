@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<!-- Chapter 1 review demo — fixed build, Oct 19, 2026 (return-visit blank-list fix) -->
-<title>Book Review — Chapter 1 (Demo) · Camino Brothers</title>
+<!-- Chapter 1 review demo - fixed build, Oct 19, 2026 (return-visit blank-list fix) -->
+<title>Book Review - Chapter 1 (Demo) · Camino Brothers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -122,20 +122,20 @@ footer button{background:none;border:0;color:var(--ink-soft);text-decoration:und
 <div id="gate">
   <div class="gate-card">
     <h1>Buen Camino, Brother</h1>
-    <p class="gate-sub">Book review page — Chapter 1 · <b>Demo</b></p>
+    <p class="gate-sub">Book review page - Chapter 1 · <b>Demo</b></p>
 
     <div id="pwStep">
       <h2>What is this page?</h2>
-      <p>This is the review page for our book, <i>Buen Camino, Brother: A WhatsApp Story</i>. Chapter 1 is our WhatsApp chat from Camino 1 (the Portuguese, October 2019). When the book starts for real, this is where we read through each chapter together and decide what stays and what goes — one chapter at a time.</p>
+      <p>This is the review page for our book, <i>Buen Camino, Brother: A WhatsApp Story</i>. Chapter 1 is our WhatsApp chat from Camino 1 (the Portuguese, October 2019). When the book starts for real, this is where we read through each chapter together and decide what stays and what goes - one chapter at a time.</p>
       <h2>How reviewing works</h2>
       <ol>
-        <li>Enter the password below, then tap your name. <b style="color:var(--mike)">Mike is blue</b>, <b style="color:var(--gold-dark)">Nicki is gold</b> — so you can always see whose mark is whose. You can switch names any time to try the other side.</li>
-        <li>Read through the messages. On each one, tap <b>Keep</b> (fine to print), <b>Cut</b> (suggest leaving it out) or <b>Veto</b> (never in print — no reason needed, and a veto from either of us wins). Nothing is ever deleted; a cut can always be undone.</li>
+        <li>Enter the password below, then tap your name. <b style="color:var(--mike)">Mike is blue</b>, <b style="color:var(--gold-dark)">Nicki is gold</b> - so you can always see whose mark is whose. You can switch names any time to try the other side.</li>
+        <li>Read through the messages. On each one, tap <b>Keep</b> (fine to print), <b>Cut</b> (suggest leaving it out) or <b>Veto</b> (never in print - no reason needed, and a veto from either of us wins). Nothing is ever deleted; a cut can always be undone.</li>
         <li>Messages marked <b>⚑ Sensitive</b> touch on family, health, money or other people. They stay <b>out</b> unless we <b>both</b> tap Keep.</li>
         <li>You can also <b>suggest different wording</b> under any message, and tap <b>Discuss</b> to talk about a specific one in the chat box.</li>
         <li>When you've been through the whole chapter, tap <b>“I'm done”</b> at the top. A chapter counts as finished only when we both have.</li>
       </ol>
-      <p class="demo-note"><b>Demo note:</b> this copy is just to show how it will work. Marks you make here stay on this device and don't reach the other person yet — the real page will sync us live.</p>
+      <p class="demo-note"><b>Demo note:</b> this copy is just to show how it will work. Marks you make here stay on this device and don't reach the other person yet - the real page will sync us live.</p>
       <div class="pw-row">
         <input id="pw" type="password" placeholder="Password" autocomplete="off">
         <button id="unlockBtn">Unlock</button>
@@ -145,7 +145,7 @@ footer button{background:none;border:0;color:var(--ink-soft);text-decoration:und
 
     <div id="whoStep" class="hidden">
       <h2>Who's reviewing?</h2>
-      <p>Tap your name. You can switch later — that's part of the demo.</p>
+      <p>Tap your name. You can switch later - that's part of the demo.</p>
       <div class="who-row">
         <button class="who-btn mike" data-who="mike">Mike</button>
         <button class="who-btn nicki" data-who="nicki">Nicki</button>
@@ -157,8 +157,8 @@ footer button{background:none;border:0;color:var(--ink-soft);text-decoration:und
 <!-- ================= APP ================= -->
 <div id="app" class="hidden">
   <header class="top">
-    <h1>Chapter 1 · On the Way — Camino 1: Portuguese, Porto → Santiago</h1>
-    <div class="dates">Oct 2–12, 2019 · 43 messages · <span class="demonote">Demo — marks stay on this device only.</span></div>
+    <h1>Chapter 1 · On the Way - Camino 1: Portuguese, Porto → Santiago</h1>
+    <div class="dates">Oct 2-12, 2019 · 43 messages · <span class="demonote">Demo - marks stay on this device only.</span></div>
     <div class="score" id="scoreboard"></div>
     <div class="dots" id="dots"></div>
     <div class="toolbar">
@@ -175,15 +175,15 @@ footer button{background:none;border:0;color:var(--ink-soft);text-decoration:und
       <span class="who-switch">Reviewing as <b id="whoName"></b> · <button id="switchBtn" style="border:0;background:none;text-decoration:underline;color:inherit;padding:0">switch</button></span>
     </div>
   </header>
-  <div class="lockbanner hidden" id="lockBanner">Both done — this chapter is ready to lock. 🎉</div>
+  <div class="lockbanner hidden" id="lockBanner">Both done - this chapter is ready to lock. 🎉</div>
   <main id="list"></main>
-  <footer>Buen Camino, Brother — review demo. Nothing here is published; the real review page comes later.<br>
+  <footer>Buen Camino, Brother - review demo. Nothing here is published; the real review page comes later.<br>
   <button id="resetBtn">Reset the demo (clear all marks on this device)</button></footer>
 </div>
 
 <button id="chatBtn" class="hidden">💬 Discuss</button>
 <div id="chatPanel" class="hidden">
-  <h3>Discuss — workshop chat (never book content)</h3>
+  <h3>Discuss - workshop chat (never book content)</h3>
   <div id="chatMsgs"></div>
   <form id="chatForm"><input id="chatInput" placeholder="Write a note…" autocomplete="off"><button type="submit">Send</button></form>
 </div>
@@ -201,17 +201,17 @@ function mark(ref){ return state.marks[ref] || {mike:null, nicki:null}; }
 
 function statusOf(it){
   const m = mark(it.ref);
-  if(m.mike === "veto" || m.nicki === "veto") return {k:"vetoed", label:"Vetoed — out, for good", cls:"out"};
+  if(m.mike === "veto" || m.nicki === "veto") return {k:"vetoed", label:"Vetoed - out, for good", cls:"out"};
   if(it.sensitive){
-    if(m.mike === "keep" && m.nicki === "keep") return {k:"in", label:"⚑ Settled — IN (both kept it)", cls:"in"};
-    if((m.mike === "keep" && m.nicki === "cut") || (m.mike === "cut" && m.nicki === "keep")) return {k:"disputed", label:"⚑ Disputed — one Keep, one Cut (stays out unless you agree)", cls:"disp"};
-    if(m.mike === "cut" && m.nicki === "cut") return {k:"out", label:"⚑ Out — both cut", cls:"out"};
-    if(m.mike === "cut" || m.nicki === "cut") return {k:"out", label:"⚑ Out — sensitive items need both Keeps", cls:"out"};
-    return {k:"sens", label:"⚑ Needs both — stays OUT unless both Keep", cls:"wait"};
+    if(m.mike === "keep" && m.nicki === "keep") return {k:"in", label:"⚑ Settled - IN (both kept it)", cls:"in"};
+    if((m.mike === "keep" && m.nicki === "cut") || (m.mike === "cut" && m.nicki === "keep")) return {k:"disputed", label:"⚑ Disputed - one Keep, one Cut (stays out unless you agree)", cls:"disp"};
+    if(m.mike === "cut" && m.nicki === "cut") return {k:"out", label:"⚑ Out - both cut", cls:"out"};
+    if(m.mike === "cut" || m.nicki === "cut") return {k:"out", label:"⚑ Out - sensitive items need both Keeps", cls:"out"};
+    return {k:"sens", label:"⚑ Needs both - stays OUT unless both Keep", cls:"wait"};
   }
-  if(m.mike === "keep" && m.nicki === "keep") return {k:"in", label:"Settled — IN", cls:"in"};
-  if(m.mike === "cut" && m.nicki === "cut") return {k:"out", label:"Settled — OUT (cut by both)", cls:"out"};
-  if(m.mike && m.nicki) return {k:"disputed", label:"Disputed — one Keep, one Cut", cls:"disp"};
+  if(m.mike === "keep" && m.nicki === "keep") return {k:"in", label:"Settled - IN", cls:"in"};
+  if(m.mike === "cut" && m.nicki === "cut") return {k:"out", label:"Settled - OUT (cut by both)", cls:"out"};
+  if(m.mike && m.nicki) return {k:"disputed", label:"Disputed - one Keep, one Cut", cls:"disp"};
   if(m.mike || m.nicki) return {k:"wait", label:"Waiting on the other", cls:"wait"};
   return {k:"undecided", label:"Undecided", cls:"wait"};
 }
@@ -223,7 +223,7 @@ function fmtDate(iso){
 function mediaChip(it){
   if(!it.media) return "";
   const ic = {image:"📷 Photo " + (it.photo_ref || ""), video:"🎬 Video", audio:"🎙️ Voice message", sticker:"🖼️ Sticker", document:"📄 Document", GIF:"🖼️ GIF"}[it.media] || "📎 Media";
-  return '<div><span class="media-chip">' + ic + ' — sent in the chat</span></div>';
+  return '<div><span class="media-chip">' + ic + ' - sent in the chat</span></div>';
 }
 
 /* ---------- gate ---------- */
@@ -231,7 +231,7 @@ const gate = document.getElementById("gate"), app = document.getElementById("app
 function tryUnlock(){
   const v = document.getElementById("pw").value.trim();
   if(v === PASSWORD){ state.unlocked = true; save(); showWho(); }
-  else document.getElementById("pwErr").textContent = "That's not the password — check with Mike and try again.";
+  else document.getElementById("pwErr").textContent = "That's not the password - check with Mike and try again.";
 }
 function showWho(){
   document.getElementById("pwStep").classList.add("hidden");
@@ -303,7 +303,7 @@ function markChip(person, val){
 function renderList(){
   const f = document.getElementById("filter").value;
   if(f === "editor"){
-    list.innerHTML = '<div class="empty-note">Chapter 1 has no editor\'s cuts — all 43 messages were kept as written. The editor\'s cuts start appearing from Chapter 2 on; they arrive already marked Cut, and a Keep from either of you rescues them.</div>';
+    list.innerHTML = '<div class="empty-note">Chapter 1 has no editor\'s cuts - all 43 messages were kept as written. The editor\'s cuts start appearing from Chapter 2 on; they arrive already marked Cut, and a Keep from either of you rescues them.</div>';
     return;
   }
   let html = "", lastDate = "";
@@ -320,7 +320,7 @@ function renderList(){
       (it.sensitive ? '<span class="sens-badge">⚑ Sensitive</span>' : "") +
       '<span class="when">' + it.time + '</span></div>' +
       (it.media ? mediaChip(it) : '<div class="body' + cutCls + '">' + escapeHtml(it.text || "") + '</div>') +
-      (it.sensitive ? '<div class="sens-reason">⚑ ' + escapeHtml(it.sensitive) + ' — stays out unless both Keep.</div>' : "") +
+      (it.sensitive ? '<div class="sens-reason">⚑ ' + escapeHtml(it.sensitive) + ' - stays out unless both Keep.</div>' : "") +
       '<div class="marks">' + markChip("mike", m.mike) + markChip("nicki", m.nicki) + '</div>' +
       '<div class="status-line ' + st.cls + '">' + st.label + '</div>' +
       '<div class="actions">' +
@@ -389,7 +389,7 @@ document.getElementById("chatForm").addEventListener("submit", e => {
 document.getElementById("filter").addEventListener("change", renderList);
 document.getElementById("jumpBtn").addEventListener("click", () => {
   const t = ITEMS.find(it => { const k = statusOf(it).k; return k === "undecided" || k === "wait"; });
-  if(t){ jumpTo(t.ref); } else { alert("Nothing undecided — nice work!"); }
+  if(t){ jumpTo(t.ref); } else { alert("Nothing undecided - nice work!"); }
 });
 document.getElementById("doneMike").addEventListener("click", () => { state.done.mike = !state.done.mike; save(); renderAll(); });
 document.getElementById("doneNicki").addEventListener("click", () => { state.done.nicki = !state.done.nicki; save(); renderAll(); });
