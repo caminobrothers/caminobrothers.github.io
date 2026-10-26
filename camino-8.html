@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camino: Tyrol (2026) - Camino Brothers</title>
-  <meta name="description" content="The Camino Brothers' eighth walk: Salzburg to St. Christoph, then Bolzano, Italy and a final day in Munich, June 2026 - the hardest one yet, by their own verdict.">
+  <meta name="description" content="The Camino Brothers' eighth walk: Lofer to St. Christoph on foot, then Bolzano, Italy by train, June 2026 - the hardest one yet, by their own verdict.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Camino Brothers">
   <meta property="og:title" content="Camino: Tyrol (2026) - Camino Brothers">
-  <meta property="og:description" content="The Camino Brothers' eighth walk: Salzburg to St. Christoph, then Bolzano, Italy and a final day in Munich, June 2026 - the hardest one yet, by their own verdict.">
+  <meta property="og:description" content="The Camino Brothers' eighth walk: Lofer to St. Christoph on foot, then Bolzano, Italy by train, June 2026 - the hardest one yet, by their own verdict.">
   <meta property="og:url" content="https://caminobrothers.com/camino-8.html">
   <meta property="og:image" content="https://caminobrothers.com/photos/camino8/camino8-lead.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Camino: Tyrol (2026) - Camino Brothers">
-  <meta name="twitter:description" content="The Camino Brothers' eighth walk: Salzburg to St. Christoph, then Bolzano, Italy and a final day in Munich, June 2026 - the hardest one yet, by their own verdict.">
+  <meta name="twitter:description" content="The Camino Brothers' eighth walk: Lofer to St. Christoph on foot, then Bolzano, Italy by train, June 2026 - the hardest one yet, by their own verdict.">
   <meta name="twitter:image" content="https://caminobrothers.com/photos/camino8/camino8-lead.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +133,11 @@
   
     .title-row { display: flex; align-items: center; justify-content: space-between; gap: 2.2rem; flex-wrap: wrap; max-width: 1080px; margin: 0 auto; padding: 0 0.5rem; }
     .chat-quote { max-width: 340px; margin-top: 1.4rem; text-align: left; }
+    .map-thumb { position: relative; flex: 0 0 auto; padding: 0; border: none; background: none; cursor: zoom-in; }
+    .map-thumb img { display: block; height: 148px; width: auto; border: 1px solid var(--gold); border-radius: 4px; box-shadow: 2px 2px 0 var(--shadow); background: #fff; }
+    .map-thumb .map-badge { position: absolute; right: 6px; bottom: 6px; background: rgba(20,17,13,0.82); color: #fdf8ec; font-size: 0.72rem; letter-spacing: 0.08em; padding: 0.18rem 0.5rem; border-radius: 999px; }
+    .map-thumb:hover img, .map-thumb:focus-visible img { outline: 2px solid var(--crimson); outline-offset: 2px; }
+    @media (max-width: 820px) { .title-row .preview-title { flex-basis: 100%; order: 2; } .map-thumb { order: 1; margin: 0 auto; } .chat-quote { order: 3; } }
     .chat-bubble { position: relative; min-height: 4.3rem; background: #d9e9f6; border: 1px solid #9dbfdc; border-radius: 14px; padding: 0.7rem 1rem; box-shadow: 2px 2px 0 var(--shadow); }
     .chat-bubble p { margin: 0; font-size: 1.05rem; }
     .chat-bubble::after { content: ""; position: absolute; left: -7px; top: 24px; width: 12px; height: 12px; background: #d9e9f6; border-left: 1px solid #9dbfdc; border-bottom: 1px solid #9dbfdc; transform: rotate(45deg); }
@@ -191,6 +196,7 @@
   <main id="main">
     <div class="wrap">
       <div class="title-row">
+      <button class="map-thumb" type="button" data-full="photos/camino8/map-camino8.webp" data-alt="Camino 8 route map - Tyrol from Lofer to the Arlberg" data-caption="Camino 8 - Tyrol: Lofer to St. Christoph, about 235 km walked" aria-label="Enlarge the Camino 8 route map"><img src="photos/camino8/map-camino8.webp" alt="Camino 8 route map - Tyrol from Lofer to the Arlberg"><span class="map-badge">MAP &#10530;</span></button>
       <div class="preview-title">
         <p class="eyebrow">Camino &middot; 2026</p>
         <h1>Tyrol</h1>
@@ -203,8 +209,8 @@
     </div>
       <ul class="facts facts-band" aria-label="Camino quick facts">
         <li><span class="fact-label">Dates</span><span class="fact-value">Jun 5 - Jun 19, 2026</span></li>
-        <li><span class="fact-label">Distance</span><span class="fact-value">266 km</span></li>
-        <li><span class="fact-label">Route</span><span class="fact-value">Salzburg &rarr; St. Christoph &rarr; Bolzano &rarr; Munich</span></li>
+        <li><span class="fact-label">Distance</span><span class="fact-value">&asymp; 235 km walked</span></li>
+        <li><span class="fact-label">Route</span><span class="fact-value">Lofer &rarr; St. Christoph on foot &rarr; Bolzano &rarr; Munich</span></li>
         <li><span class="fact-label">Countries</span><span class="fact-value"><span class="fact-country"><img class="flag" src="photos/flags/at.png" alt="">Austria</span><span class="fact-country"><img class="flag" src="photos/flags/it.png" alt="">Italy</span><span class="fact-country"><img class="flag" src="photos/flags/de.png" alt="">Germany</span></span></li>
       </ul>
 
@@ -218,29 +224,30 @@
         <p>
           The eighth camino closed a loop: where 2024 had taken them
           from Munich to Innsbruck, 2026 crossed the high country the
-          other way - Salzburg to
-          St. Christoph, then on to Bolzano, Italy, and one last
-          day and night in Munich. Dennis joined for the first week; the nursing
+          other way - a night in Salzburg, a bus to Lofer, then west
+          on foot to St. Christoph at the Arlberg, and trains on to
+          Bolzano, Italy, and one last night in Munich. Dennis joined for the first week; the nursing
           shifts had been assigned in advance, Nicki ruling: "Dennis
           is your nurse in the first week. I am your nurse in the
           second." Mike flew in on June 5, and somewhere along the way
           finally met Nicki's mother Regina and her husband.
         </p>
         <p>
-          On the trail they passed through Landeck in Tyrol and the
-          alpine-crossing country around Oberstdorf, walking by day
+          On the trail they passed through Landeck in Tyrol and
+          climbed the Arlberg to St. Christoph, walking by day
           and keeping up with the World Cup by night (Canada 1-1
-          Bosnia, watched together). The running battle was with the
+          Bosnia, watched together in Silz). The running battle was with the
           June sun - the requests for nose cream became a daily
           refrain.
         </p>
         <p>
-          The last day, June 19, was the one they'll measure the others
+          The last day, June 19 - a day of trains, not trail - was the one they'll measure the others
           against. "Feels as hard as a 30-kilometre walk today,"
           Mike reported. "Today was brutal." Nicki: "The hardest
           ever - but we made it." Mike: "Yes buddy. I am proud."
-          The final night was spent in the exact same Munich hotel as
-          2024, and Mike flew home the next day. Nicki's summary of
+          The final night was spent in the exact same airport hotel as
+          2024 - in Kelsterbach, outside Frankfurt - and Mike flew
+          home the next day. Nicki's summary of
           the whole trip doubles as the brothers' motto: "We are
           awesome - except trains."
         </p>
@@ -254,10 +261,10 @@
 <li><button type="button" data-full="photos/camino8/camino8-05.jpg" data-alt="Nicki and Mike taking a selfie on the trail, forested cliffs behind them" data-caption="Nicki and Mike, into the high country - Jun 6"><img src="photos/camino8/camino8-05.jpg" alt="Nicki and Mike taking a selfie on the trail, forested cliffs behind them" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-06.jpg" data-alt="Dennis, Mike and Nicki with a friend at a train station, departure board behind them" data-caption="Four at the station"><img src="photos/camino8/camino8-06.jpg" alt="Dennis, Mike and Nicki with a friend at a train station, departure board behind them" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-07.jpg" data-alt="Dennis, Nicki pulling a face, Mike and a friend squeezed into an elevator selfie" data-caption="The elevator crew"><img src="photos/camino8/camino8-07.jpg" alt="Dennis, Nicki pulling a face, Mike and a friend squeezed into an elevator selfie" loading="lazy"></button></li>
-<li><button type="button" data-full="photos/camino8/camino8-08.jpg" data-alt="Mike in the foreground of a bar while Dennis and a friend sit at a table behind him, World Cup flags overhead" data-caption="World Cup night at the bar - Jun 10"><img src="photos/camino8/camino8-08.jpg" alt="Mike in the foreground of a bar while Dennis and a friend sit at a table behind him, World Cup flags overhead" loading="lazy"></button></li>
+<li><button type="button" data-full="photos/camino8/camino8-08.jpg" data-alt="Mike in the foreground of a bar while Dennis and a friend sit at a table behind him, World Cup flags overhead" data-caption="World Cup night at the bar - Jun 12"><img src="photos/camino8/camino8-08.jpg" alt="Mike in the foreground of a bar while Dennis and a friend sit at a table behind him, World Cup flags overhead" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-09.jpg" data-alt="Dennis, Nicki and Mike posing together in an elevator" data-caption="Yet another elevator pic - Jun 10"><img src="photos/camino8/camino8-09.jpg" alt="Dennis, Nicki and Mike posing together in an elevator" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-10.jpg" data-alt="Mike, Regina's husband, Regina and Nicki around a restaurant table with Dennis in the foreground" data-caption="Dinner with Nicki's mother Regina and her husband Matze - Jun 10"><img src="photos/camino8/camino8-10.jpg" alt="Mike, Regina's husband, Regina and Nicki around a restaurant table with Dennis in the foreground" loading="lazy"></button></li>
-<li><button type="button" data-full="photos/camino8/camino8-11.jpg" data-alt="Nicki and Mike in an elevator mirror selfie, both holding their phones up" data-caption="Elevator mirror selfie - Jun 11"><img src="photos/camino8/camino8-11.jpg" alt="Nicki and Mike in an elevator mirror selfie, both holding their phones up" loading="lazy"></button></li>
+<li><button type="button" data-full="photos/camino8/camino8-11.jpg" data-alt="Nicki and Mike in an elevator mirror selfie, both holding their phones up" data-caption="Elevator mirror selfie - Jun 9"><img src="photos/camino8/camino8-11.jpg" alt="Nicki and Mike in an elevator mirror selfie, both holding their phones up" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-12.jpg" data-alt="Mike in a straw hat taking a selfie on a wet mountain road, Nicki walking ahead, green valley and peaks behind" data-caption="On the road - Mike, with Nicki up ahead - Jun 12"><img src="photos/camino8/camino8-12.jpg" alt="Mike in a straw hat taking a selfie on a wet mountain road, Nicki walking ahead, green valley and peaks behind" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-13.jpg" data-alt="Nicki and Mike clinking beer glasses at an outdoor table" data-caption="A toast on the trail"><img src="photos/camino8/camino8-13.jpg" alt="Nicki and Mike clinking beer glasses at an outdoor table" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-02.jpg" data-alt="Nicki smiling close to the camera with Mike behind him at a café table" data-caption="Café stop - Nicki takes the selfie"><img src="photos/camino8/camino8-02.jpg" alt="Nicki smiling close to the camera with Mike behind him at a café table" loading="lazy"></button></li>
@@ -265,7 +272,7 @@
 <li><button type="button" data-full="photos/camino8/camino8-14.jpg" data-alt="A green alpine valley with a village and church spire below high peaks" data-caption="The valley below the high peaks"><img src="photos/camino8/camino8-14.jpg" alt="A green alpine valley with a village and church spire below high peaks" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-15.jpg" data-alt="Nicki and Mike taking a selfie with a green valley and peaks behind them" data-caption="Views like this are the paycheque"><img src="photos/camino8/camino8-15.jpg" alt="Nicki and Mike taking a selfie with a green valley and peaks behind them" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-16.jpg" data-alt="Nicki in a bandana and Mike in a straw hat taking a selfie on the trail, mountains behind" data-caption="On the trail, high country"><img src="photos/camino8/camino8-16.jpg" alt="Nicki in a bandana and Mike in a straw hat taking a selfie on the trail, mountains behind" loading="lazy"></button></li>
-<li><button type="button" data-full="photos/camino8/camino8-17.jpg" data-alt="Nicki and Mike taking a selfie inside a timber-lined salt mine tunnel" data-caption="Underground - the salt mine"><img src="photos/camino8/camino8-17.jpg" alt="Nicki and Mike taking a selfie inside a timber-lined salt mine tunnel" loading="lazy"></button></li>
+<li><button type="button" data-full="photos/camino8/camino8-17.jpg" data-alt="Nicki and Mike taking a selfie inside the timber-lined Knappa-Loch mine tunnel at the Arlberg" data-caption="Underground - the Knappa-Loch mine"><img src="photos/camino8/camino8-17.jpg" alt="Nicki and Mike taking a selfie inside the timber-lined Knappa-Loch mine tunnel at the Arlberg" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-18.jpg" data-alt="Mike with the waiter in a wood-panelled restaurant, both giving a thumbs up" data-caption="Coolest waiter in Austria - Jun 15"><img src="photos/camino8/camino8-18.jpg" alt="Mike with the waiter in a wood-panelled restaurant, both giving a thumbs up" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-19.jpg" data-alt="Nicki and Mike taking a selfie at the Flirsch village sign in the Arlberg, peaks behind them" data-caption="Flirsch, in the heart of the Arlberg"><img src="photos/camino8/camino8-19.jpg" alt="Nicki and Mike taking a selfie at the Flirsch village sign in the Arlberg, peaks behind them" loading="lazy"></button></li>
 <li><button type="button" data-full="photos/camino8/camino8-20.jpg" data-alt="Nicki sitting on a bench in a straw hat and sunglasses, showing a bandaged finger, tattooed arms" data-caption="Nicki rests - note the bandaged finger - Jun 16"><img src="photos/camino8/camino8-20.jpg" alt="Nicki sitting on a bench in a straw hat and sunglasses, showing a bandaged finger, tattooed arms" loading="lazy"></button></li>
