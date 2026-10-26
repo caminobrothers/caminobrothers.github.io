@@ -46,6 +46,12 @@
     .c9-layout .story { margin: 0; max-width: none; }
     .c9-art { margin: 0 auto; max-width: 380px; }
     .c9-art img { display: block; width: 100%; height: auto; }
+    .c9-map { margin: 1.4rem 0 0; }
+    .c9-map .map-thumb { position: relative; display: block; width: 100%; padding: 0; border: none; background: none; cursor: zoom-in; }
+    .c9-map .map-thumb img { display: block; width: 100%; height: auto; border: 1px solid var(--gold); border-radius: 4px; box-shadow: 2px 2px 0 var(--shadow); background: #fff; }
+    .c9-map .map-badge { position: absolute; right: 8px; bottom: 8px; background: rgba(20,17,13,0.82); color: #fdf8ec; font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.25rem 0.6rem; border-radius: 999px; }
+    .c9-map .map-thumb:hover img, .c9-map .map-thumb:focus-visible img { outline: 2px solid var(--crimson); outline-offset: 2px; }
+    .c9-map figcaption { font-size: 0.9rem; color: var(--ink-soft); font-style: italic; margin-top: 0.45rem; text-align: center; }
     @media (max-width: 820px) {
       .c9-layout { grid-template-columns: 1fr; }
     }
@@ -101,9 +107,14 @@
           </ul>
 
           <div class="story">
-            <p><strong>The ninth Camino Brothers hike - September 2027.</strong> The ninth Camino Brothers hike takes on the Camino Francés, the classic pilgrim road across northern Spain - 500 km from Saint-Jean-Pied-de-Port to León. Three weeks on the trail, September 28 to October 18, 2027.</p>
+            <p><strong>The ninth Camino Brothers hike - September 2027.</strong> The ninth Camino Brothers hike takes on the Camino Francés, the classic pilgrim road across northern Spain - about 465 km from Saint-Jean-Pied-de-Port to León. Three weeks on the trail, September 28 to October 18, 2027.</p>
             <p>Follow along here once the boots hit the trail.</p>
           </div>
+
+          <figure class="c9-map">
+            <button class="map-thumb" type="button" data-full="photos/camino9/map-camino9-plan.webp" data-alt="Camino 9 plan map - the Camino Francés from Saint-Jean-Pied-de-Port to León in 20 stages" data-caption="Camino 9 - the plan: Saint-Jean-Pied-de-Port to León, 20 stages, about 465 km" aria-label="Enlarge the Camino 9 plan map"><img src="photos/camino9/map-camino9-plan.webp" alt="Camino 9 plan map - the Camino Francés from Saint-Jean-Pied-de-Port to León in 20 stages"><span class="map-badge">MAP &#10530;</span></button>
+            <figcaption>The plan - the Camino Francés in 20 classic stages. Tap the map for the full-size view.</figcaption>
+          </figure>
         </div>
 
         <figure class="c9-art">
