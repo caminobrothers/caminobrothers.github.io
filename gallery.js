@@ -12,6 +12,33 @@
     });
   }
 
+  /* ----- map thumbnail lightbox (title-row) ----- */
+  var mapBtn = document.querySelector(".map-thumb[data-full]");
+  if (mapBtn) {
+    var mov = document.createElement("div");
+    mov.className = "lightbox";
+    mov.setAttribute("role", "dialog");
+    mov.setAttribute("aria-modal", "true");
+    mov.setAttribute("aria-label", "Map viewer");
+    mov.innerHTML = '<button class="lb-btn lb-close" aria-label="Close map viewer">&times;</button>' +
+      '<figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(mov);
+    var mimg = mov.querySelector("img");
+    var mcap = mov.querySelector("figcaption");
+    function mclose() { mov.classList.remove("open"); document.body.style.overflow = ""; mimg.removeAttribute("src"); }
+    mapBtn.addEventListener("click", function () {
+      mimg.src = mapBtn.getAttribute("data-full");
+      mimg.alt = mapBtn.getAttribute("data-alt") || "";
+      mcap.textContent = mapBtn.getAttribute("data-caption") || "";
+      mov.classList.add("open");
+      document.body.style.overflow = "hidden";
+      mov.querySelector(".lb-close").focus();
+    });
+    mov.querySelector(".lb-close").addEventListener("click", mclose);
+    mov.addEventListener("click", function (e) { if (e.target === mov) mclose(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && mov.classList.contains("open")) mclose(); });
+  }
+
   /* ----- lightbox ----- */
   var gallery = document.querySelector(".gallery");
   if (!gallery) return;
@@ -75,30 +102,4 @@
     else if (e.key === "ArrowRight") show(current + 1);
   });
 
-  /* ----- map thumbnail lightbox (title-row) ----- */
-  var mapBtn = document.querySelector(".map-thumb[data-full]");
-  if (mapBtn) {
-    var mov = document.createElement("div");
-    mov.className = "lightbox";
-    mov.setAttribute("role", "dialog");
-    mov.setAttribute("aria-modal", "true");
-    mov.setAttribute("aria-label", "Map viewer");
-    mov.innerHTML = '<button class="lb-btn lb-close" aria-label="Close map viewer">&times;</button>' +
-      '<figure><img alt=""><figcaption></figcaption></figure>';
-    document.body.appendChild(mov);
-    var mimg = mov.querySelector("img");
-    var mcap = mov.querySelector("figcaption");
-    function mclose() { mov.classList.remove("open"); document.body.style.overflow = ""; mimg.removeAttribute("src"); }
-    mapBtn.addEventListener("click", function () {
-      mimg.src = mapBtn.getAttribute("data-full");
-      mimg.alt = mapBtn.getAttribute("data-alt") || "";
-      mcap.textContent = mapBtn.getAttribute("data-caption") || "";
-      mov.classList.add("open");
-      document.body.style.overflow = "hidden";
-      mov.querySelector(".lb-close").focus();
-    });
-    mov.querySelector(".lb-close").addEventListener("click", mclose);
-    mov.addEventListener("click", function (e) { if (e.target === mov) mclose(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && mov.classList.contains("open")) mclose(); });
-  }
 })();
