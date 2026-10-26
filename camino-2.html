@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camino: The French Way (2021) - Camino Brothers</title>
-  <meta name="description" content="Camino: the Camino Frances from Leon to Finisterre, October 3-21, 2021. 413 km across Spain - the reunion camino after two years of Covid. Photos and journal.">
+  <meta name="description" content="Camino: the Camino Frances from Leon to Finisterre, October 3-21, 2021. about 285 km walked across Spain - the reunion camino after two years of Covid. Photos and journal.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Camino Brothers">
   <meta property="og:title" content="Camino: The French Way (2021) - Camino Brothers">
-  <meta property="og:description" content="Camino: the Camino Frances from Leon to Finisterre, October 3-21, 2021. 413 km across Spain - the reunion camino after two years of Covid. Photos and journal.">
+  <meta property="og:description" content="Camino: the Camino Frances from Leon to Finisterre, October 3-21, 2021. about 285 km walked across Spain - the reunion camino after two years of Covid. Photos and journal.">
   <meta property="og:url" content="https://caminobrothers.com/camino-2.html">
   <meta property="og:image" content="https://caminobrothers.com/photos/camino2/camino2-lead.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Camino: The French Way (2021) - Camino Brothers">
-  <meta name="twitter:description" content="Camino: the Camino Frances from Leon to Finisterre, October 3-21, 2021. 413 km across Spain - the reunion camino after two years of Covid. Photos and journal.">
+  <meta name="twitter:description" content="Camino: the Camino Frances from Leon to Finisterre, October 3-21, 2021. about 285 km walked across Spain - the reunion camino after two years of Covid. Photos and journal.">
   <meta name="twitter:image" content="https://caminobrothers.com/photos/camino2/camino2-lead.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +133,12 @@
       @media (min-width: 1000px) { .gallery-75 { grid-template-columns: repeat(8, 1fr); } }
   
     .title-row { display: flex; align-items: center; justify-content: space-between; gap: 2.2rem; flex-wrap: wrap; max-width: 1080px; margin: 0 auto; padding: 0 0.5rem; }
+    .title-row .preview-title { flex: 1 1 auto; text-align: center; }
+    .map-thumb { position: relative; flex: 0 0 auto; padding: 0; border: none; background: none; cursor: zoom-in; }
+    .map-thumb img { display: block; height: 148px; width: auto; border: 1px solid var(--gold); border-radius: 4px; box-shadow: 2px 2px 0 var(--shadow); background: #fff; }
+    .map-thumb .map-badge { position: absolute; right: 6px; bottom: 6px; background: rgba(20,17,13,0.82); color: #fdf8ec; font-size: 0.72rem; letter-spacing: 0.08em; padding: 0.18rem 0.5rem; border-radius: 999px; }
+    .map-thumb:hover img, .map-thumb:focus-visible img { outline: 2px solid var(--crimson); outline-offset: 2px; }
+    @media (max-width: 820px) { .title-row .preview-title { flex-basis: 100%; order: 2; } .map-thumb { order: 1; margin: 0 auto; } .chat-quote { order: 3; } }
     .chat-quote { max-width: 340px; margin-top: 1.4rem; text-align: left; }
     .chat-bubble { position: relative; min-height: 4.3rem; background: #d9e9f6; border: 1px solid #9dbfdc; border-radius: 14px; padding: 0.7rem 1rem; box-shadow: 2px 2px 0 var(--shadow); }
     .chat-bubble p { margin: 0; font-size: 1.05rem; }
@@ -192,6 +198,7 @@
   <main id="main">
     <div class="wrap">
       <div class="title-row">
+      <button class="map-thumb" type="button" data-full="photos/camino2/map-camino2.webp" data-alt="Camino 2 route map - León to Finisterre" data-caption="Camino 2 - The French Way: León to Finisterre, about 285 km walked (Sarria to Santiago by bus)" aria-label="Enlarge the Camino 2 route map"><img src="photos/camino2/map-camino2.webp" alt="Camino 2 route map - León to Finisterre"><span class="map-badge">MAP &#10530;</span></button>
       <div class="preview-title">
         <p class="eyebrow">Camino &middot; 2021</p>
         <h1>The French Way</h1>
@@ -204,7 +211,7 @@
     </div>
       <ul class="facts facts-band" aria-label="Camino quick facts">
         <li><span class="fact-label">Dates</span><span class="fact-value">Oct 3 - Oct 21, 2021</span></li>
-        <li><span class="fact-label">Distance</span><span class="fact-value">413 km</span></li>
+        <li><span class="fact-label">Distance</span><span class="fact-value">&asymp; 285 km walked</span></li>
         <li><span class="fact-label">Route</span><span class="fact-value">León &rarr; Finisterre</span></li>
         <li><span class="fact-label">Countries</span><span class="fact-value"><img class="flag" src="photos/flags/es.png" alt="">Spain</span></li>
       </ul>
@@ -234,14 +241,15 @@
         <p>
           The reunion began at a sprint: a tight connection in Frankfurt,
           Mike still taxiing on the runway while Nicki waited at the gate,
-          both of them willing the Madrid flight to hold. It did. On
-          October 3, 2021, Mike and Nicki set out from León on the Camino
-          Francés. Dennis had to sit this one out, so this time the brothers
-          were two. Ahead of them lay the Montes de León and the Cruz de
-          Ferro, Ponferrada, the climb to O Cebreiro, and the green hills of
-          Galicia down to Santiago de Compostela - and even then they kept
-          walking, all the way to Finisterre, the end of the world, where
-          the land runs out. 413 kilometres in total.
+          both of them willing the Madrid flight to hold. It did. They
+          reached León on October 3, 2021, and walked out the next morning
+          on the Camino Francés. Dennis had to sit this one out, so this
+          time the brothers were two. Ahead of them lay the Montes de León
+          and the Cruz de Ferro, Ponferrada, and the climb to O Cebreiro.
+          At Sarria they took the bus to Santiago - they had both walked
+          into Santiago before - and the next day they walked out again,
+          all the way to Finisterre, the end of the world, where the land
+          runs out. About 285 kilometres on foot in total.
         </p>
         <p>
           There was one scare along the way. A cough that wouldn't quit
