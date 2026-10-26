@@ -763,9 +763,11 @@ h1, h2, h3 {
 .dispatches-form .emailoctopus-error-message { color: #e88a8a; }
 
 /* Townstamp preview additions */
-.ts-banner{border-color:#175339;background:linear-gradient(135deg,#fdfaf1,#eef4ec);}
+.ts-banner{background:#06402a;border:2px solid #b08d3e;color:#ece0c8;}
 .ts-banner img{border-radius:22%;}
-.ts-promo{background:#175339;color:#f3ecd9;}
+.ts-banner .eb-text h2{color:#faf5e8;}
+.ts-banner .eb-text p{color:#ece0c8;}
+.ts-promo{background:#06402a;color:#f3ecd9;}
 .ts-promo h2{color:#f3ecd9;}
 .ts-promo .btn{background:#a31621;color:#fff;}
 .ts-promo-icon{width:92px;height:92px;border-radius:22%;margin-bottom:10px;}
