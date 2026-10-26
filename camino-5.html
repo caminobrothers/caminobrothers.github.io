@@ -132,6 +132,11 @@
     @media (max-width: 760px) { .video-pair { grid-template-columns: 1fr; } .video-pair video { height: auto; max-height: 480px; } }
   
     .title-row { display: flex; align-items: center; justify-content: space-between; gap: 2.2rem; flex-wrap: wrap; max-width: 1080px; margin: 0 auto; padding: 0 0.5rem; }
+    .map-thumb { position: relative; flex: 0 0 auto; padding: 0; border: none; background: none; cursor: zoom-in; }
+    .map-thumb img { display: block; height: 148px; width: auto; border: 1px solid var(--gold); border-radius: 4px; box-shadow: 2px 2px 0 var(--shadow); background: #fff; }
+    .map-thumb .map-badge { position: absolute; right: 6px; bottom: 6px; background: rgba(20,17,13,0.82); color: #fdf8ec; font-size: 0.72rem; letter-spacing: 0.08em; padding: 0.18rem 0.5rem; border-radius: 999px; }
+    .map-thumb:hover img, .map-thumb:focus-visible img { outline: 2px solid var(--crimson); outline-offset: 2px; }
+    @media (max-width: 820px) { .title-row .preview-title { flex-basis: 100%; order: 2; } .map-thumb { order: 1; margin: 0 auto; } .chat-quote { order: 3; } }
     .chat-quote { max-width: 340px; margin-top: 1.4rem; text-align: left; }
     .chat-bubble { position: relative; min-height: 4.3rem; background: #d9e9f6; border: 1px solid #9dbfdc; border-radius: 14px; padding: 0.7rem 1rem; box-shadow: 2px 2px 0 var(--shadow); }
     .chat-bubble p { margin: 0; font-size: 1.05rem; }
@@ -191,6 +196,7 @@
   <main id="main">
     <div class="wrap">
       <div class="title-row">
+      <button class="map-thumb" type="button" data-full="photos/camino5/map-camino5.webp" data-alt="Camino 5 route map - Madeira day hikes from Funchal" data-caption="Camino 5 - Madeira: six day hikes from a Funchal base, about 140 km in all" aria-label="Enlarge the Camino 5 route map"><img src="photos/camino5/map-camino5.webp" alt="Camino 5 route map - Madeira day hikes from Funchal"><span class="map-badge">MAP &#10530;</span></button>
       <div class="preview-title">
         <p class="eyebrow">Camino &middot; 2024</p>
         <h1>Madeira</h1>
