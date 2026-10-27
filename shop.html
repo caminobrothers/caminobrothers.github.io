@@ -10,11 +10,11 @@
   <meta property="og:title" content="Shop - Camino Brothers">
   <meta property="og:description" content="Camino Brothers merch - t-shirts, hats and more pilgrim gear. Coming soon.">
   <meta property="og:url" content="https://caminobrothers.com/shop.html">
-  <meta property="og:image" content="https://caminobrothers.com/photos/merch/ebook-between-caminos.webp">
+  <meta property="og:image" content="https://caminobrothers.com/photos/merch/ebook-cover.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Shop - Camino Brothers">
   <meta name="twitter:description" content="Camino Brothers merch - t-shirts, hats and more pilgrim gear. Coming soon.">
-  <meta name="twitter:image" content="https://caminobrothers.com/photos/merch/ebook-between-caminos.webp">
+  <meta name="twitter:image" content="https://caminobrothers.com/photos/merch/ebook-cover.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
@@ -40,6 +40,9 @@
   <style>
     /* Ebook banner: price in gold-light - readable on the banner's black background */
     .ebook-banner .eb-text p strong { color: var(--gold-light); }
+    /* Ebook banner thumb: the book cover is portrait - show it whole, not cropped */
+    .ebook-banner img { width: 64px; height: 96px; }
+    @media (max-width: 560px) { .ebook-banner img { width: 52px; height: 78px; } }
   </style>
 </head>
 <body>
@@ -77,7 +80,7 @@
       </div>
 
       <section class="ebook-banner" aria-label="Buen Camino, Brother ebook">
-        <img src="photos/merch/ebook-between-caminos.webp" alt="E-reader showing the Buen Camino, Brother ebook cover with crimson Templar cross and gold scallop shell" loading="lazy">
+        <img src="photos/merch/ebook-cover.webp" alt="Buen Camino, Brother book cover - two pilgrims with the bronze pilgrim statue in León" loading="lazy">
         <div class="eb-text">
           <h2>Buen Camino, Brother: A WhatsApp Story</h2>
           <p>These are real conversations between Mike and Nicki - candid, unscripted, nothing polished for show. More than 19,000 messages and hundreds of photos since 2019: a friendship between Canada and Germany, kept alive one text at a time - the jokes, everyday life, and always the anticipation of the next camino. Eight caminos in, and many more years of walking - and texting - still to come. <strong>$11.99 CAD</strong></p>
@@ -160,7 +163,7 @@
           </div>
         </li>
         <li class="card">
-          <div class="card-photo"><img src="photos/merch/ebook-between-caminos.webp" alt="E-reader on a cafe table in Spain showing the Buen Camino, Brother ebook cover with crimson Templar cross and gold scallop shell" loading="lazy"></div>
+          <div class="card-photo"><img src="photos/merch/ebook-cover.webp" alt="The Buen Camino, Brother ebook cover - two pilgrims with the bronze pilgrim statue in León, Spain" loading="lazy"></div>
           <div class="card-body">
             <span class="badge">Coming soon</span>
             <h3>Buen Camino, Brother - The Ebook</h3>
