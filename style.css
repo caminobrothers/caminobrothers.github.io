@@ -310,6 +310,11 @@ h1, h2, h3 {
   font-weight: 600;
   color: var(--iron);
 }
+/* multi-country fact cells: flags in one straight column, block centred in the cell */
+.facts-band .fact-value:has(.fact-country) { display: inline-flex; flex-direction: column; align-items: stretch; gap: 0.18rem; text-align: left; }
+.facts-band .fact-country { display: flex; align-items: center; justify-content: flex-start; gap: 0.45rem; width: auto; text-align: left; }
+.facts-band .fact-country .flag { margin-right: 0; }
+
 .flag {
   height: 0.9em;
   width: auto;
