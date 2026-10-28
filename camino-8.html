@@ -169,6 +169,12 @@
     /* Banner: brand centred as a masthead (menu keeps its own full-width row below) */
     .site-header .brand { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
   </style>
+  <style>
+    /* Lead photo fix (Oct 28, 2026): the dinner photo is 16:9 - show the whole frame
+       instead of centre-cropping it into the equal-height lead box. */
+    .lead-photo { height: auto; min-height: 0; align-self: start; }
+    .lead-photo img { position: static; width: 100%; height: auto; max-height: none; object-fit: contain; }
+  </style>
 </head>
 <body>
   <header class="site-header">
