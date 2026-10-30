@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shop - Camino Brothers</title>
-  <meta name="description" content="Camino Brothers merch - t-shirts, hats and more pilgrim gear. Coming soon.">
+  <meta name="description" content="The Camino Brothers shop - our ebook Buen Camino, Brother, the Townstamp journal app, and four pilgrim t-shirts.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Camino Brothers">
   <meta property="og:title" content="Shop - Camino Brothers">
@@ -44,7 +44,33 @@
     .ebook-banner img { width: 64px; height: 96px; }
     @media (max-width: 560px) { .ebook-banner img { width: 52px; height: 78px; } }
   </style>
+  <style>
+    .preview-strip { background: #a6192e; color: #f7f1de; text-align: center; font-size: 0.85rem; padding: 0.45rem 1rem; letter-spacing: 0.04em; }
+    
+    /* A: classic sharp museum cards, uniform */
+    .row2, .row4 { display: grid; gap: 1.1rem; margin: 1.2rem 0; }
+    .row2 { grid-template-columns: 1fr 1fr; }
+    .row4 { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 900px) { .row4 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .row2, .row4 { grid-template-columns: 1fr; } }
+    .pcard { background: var(--cream); border: 2px solid var(--gold); display: flex; flex-direction: column; }
+    .pcard .ph { aspect-ratio: 4/3; overflow: hidden; background: #111; }
+    .pcard .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* Top row (book + app): show the whole image, never cropped */
+    .row2 .pcard .ph { background: #20303c; }
+    .row2 .pcard .ph img { object-fit: contain; }
+    .pcard .pb { padding: 0.9rem 1rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
+    .pcard h3 { font-family: Cinzel, serif; margin: 0.35rem 0 0.3rem; font-size: 1.12rem; }
+    .pcard .price { font-weight: 700; color: var(--crimson); margin: 0.1rem 0 0.4rem; }
+    .pcard .badge { align-self: flex-start; }
+    .pcard .btnrow { margin-top: auto; padding-top: 0.6rem; }
+    .shop-btn { display: inline-block; padding: 0.45rem 1rem; border: 2px solid var(--gold); color: #5c4712; font-weight: 700; text-decoration: none; background: #fdf8ea; }
+    .notify-band { margin: 2rem 0; padding: 1.2rem 1.4rem; border: 2px solid var(--gold); background: #fdf8ea; text-align: center; }
+
+  </style>
 </head>
+<body>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -69,114 +95,87 @@
       </nav>
     </div>
   </header>
-
   <main id="main">
     <div class="wrap">
       <h1 class="page-title">Shop</h1>
       <div class="ornament" aria-hidden="true"><svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg></div>
-
       <div class="story">
-        <p><strong>Camino Brothers gear - coming soon.</strong> T-shirts, hats and more, printed on demand and shipped to your door - plus our first ebook, <em>Buen Camino, Brother</em>. Here's a first look at the collection.</p>
+        <p><strong>The lean shop - coming soon.</strong> Our book and Mike's Townstamp app up top, four t-shirts below - and every button lands on this one page.</p>
       </div>
 
-      <section class="ebook-banner" aria-label="Buen Camino, Brother ebook">
-        <img src="photos/merch/ebook-cover.webp" alt="Buen Camino, Brother book cover - two pilgrims with the bronze pilgrim statue in León" loading="lazy">
-        <div class="eb-text">
-          <h2>Buen Camino, Brother: A WhatsApp Story</h2>
-          <p>These are real conversations between Mike and Nicki - candid, unscripted, nothing polished for show. More than 19,000 messages and hundreds of photos since 2019: a friendship between Canada and Germany, kept alive one text at a time - the jokes, everyday life, and always the anticipation of the next camino. Eight caminos in, and many more years of walking - and texting - still to come. <strong>$11.99 CAD</strong></p>
+      <h2 class="section-title">The Book &amp; The App</h2>
+      <div class="row2">
+        <div class="pcard">
+          <div class="ph"><img src="photos/merch/ebook-cover.webp" alt="Buen Camino, Brother book cover - two pilgrims with the bronze pilgrim statue in Leon" loading="lazy"></div>
+          <div class="pb">
+            <span class="badge">Coming to Amazon</span>
+          <h3>Buen Camino, Brother - The Ebook</h3>
+            <p class="price">$11.99 CAD</p>
+            <p>A WhatsApp story - two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019.</p>
+            <div class="btnrow"><a class="shop-btn" href="#notify">Notify me</a></div>
+          </div>
         </div>
-        <span class="eb-badge">Coming soon</span>
-      </section>
+        <div class="pcard">
+          <div class="ph"><img src="photos/merch/townstamp-icon.webp?v=2" alt="Townstamp app icon - a round blue pilgrim stamp over a journal" loading="lazy"></div>
+          <div class="pb">
+            <span class="badge">Coming to App Store</span>
+          <h3>Townstamp - The Journal App</h3>
+            <p class="price">Free to download · one-time unlock</p>
+            <p>Mike's app: every entry stamped with the town and the date, photos kept with the words, a book-style PDF when you get home.</p>
+            <div class="btnrow"><a class="shop-btn" href="https://townstamp.app">townstamp.app</a></div>
+          </div>
+        </div>
+      </div>
 
-      <h2 class="section-title">The Collection</h2>
-      <ul class="card-grid">
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/tee-cross.webp" alt="Black t-shirt with crimson Templar cross and gold Camino Brothers lettering" loading="lazy"></div>
-          <div class="card-body">
+      <h2 class="section-title">The Shirts</h2>
+      <div class="row4">
+        <div class="pcard">
+          <div class="ph"><img src="photos/merch/tee-cross.webp" alt="Black t-shirt with crimson Templar cross and gold Camino Brothers lettering" loading="lazy"></div>
+          <div class="pb">
             <span class="badge">Coming soon</span>
-            <h3>Templar Cross Tee</h3>
+          <h3>Templar Cross Tee</h3>
             <p class="price">$44 CAD</p>
             <p>Crimson cross and Camino Brothers lettering. The classic. Black or white.</p>
+            <div class="btnrow"><a class="shop-btn" href="#notify">Notify me</a></div>
           </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/tee-buen-camino.webp" alt="Black t-shirt with gold scallop shell and Buen Camino lettering" loading="lazy"></div>
-          <div class="card-body">
+        </div>
+        <div class="pcard">
+          <div class="ph"><img src="photos/merch/tee-buen-camino.webp" alt="Black t-shirt with gold scallop shell and Buen Camino lettering" loading="lazy"></div>
+          <div class="pb">
             <span class="badge">Coming soon</span>
-            <h3>Buen Camino Shell Tee</h3>
+          <h3>Buen Camino Shell Tee</h3>
             <p class="price">$44 CAD</p>
             <p>Scallop shell and the pilgrim's greeting. Black or white.</p>
+            <div class="btnrow"><a class="shop-btn" href="#notify">Notify me</a></div>
           </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/tee-routemap.webp" alt="Black t-shirt with gold Camino Frances route map from Saint-Jean-Pied-de-Port to Santiago de Compostela" loading="lazy"></div>
-          <div class="card-body">
+        </div>
+        <div class="pcard">
+          <div class="ph"><img src="photos/merch/tee-routemap.webp" alt="Black t-shirt with gold Camino Frances route map from Saint-Jean-Pied-de-Port to Santiago de Compostela" loading="lazy"></div>
+          <div class="pb">
             <span class="badge">Coming soon</span>
-            <h3>Camino Francés Route Map Tee</h3>
+          <h3>Camino Frances Route Map Tee</h3>
             <p class="price">$44 CAD</p>
             <p>The whole French Way in gold - Saint-Jean to Santiago, ~780 km. Black or white.</p>
+            <div class="btnrow"><a class="shop-btn" href="#notify">Notify me</a></div>
           </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/tee-waymarker.webp" alt="Black t-shirt with blue waymarker tile, yellow scallop shell and yellow arrow, Buen Camino lettering" loading="lazy"></div>
-          <div class="card-body">
+        </div>
+        <div class="pcard">
+          <div class="ph"><img src="photos/merch/tee-waymarker.webp" alt="Black t-shirt with blue waymarker tile, yellow scallop shell and yellow arrow, Buen Camino lettering" loading="lazy"></div>
+          <div class="pb">
             <span class="badge">Coming soon</span>
-            <h3>Waymarker Tee</h3>
+          <h3>Waymarker Tee</h3>
             <p class="price">$44 CAD</p>
             <p>The blue waymarker tile - shell and flecha, just like the trail. Black or white.</p>
+            <div class="btnrow"><a class="shop-btn" href="#notify">Notify me</a></div>
           </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/cap-cross.webp" alt="Black baseball cap with crimson Templar cross embroidered on the front" loading="lazy"></div>
-          <div class="card-body">
-            <span class="badge">Coming soon</span>
-            <h3>Embroidered Cap</h3>
-            <p class="price">$44 CAD</p>
-            <p>Crimson cross stitched on black. Trail-tested style.</p>
-          </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/mug-taza.webp" alt="Small white Spanish-style coffee cup with crimson Templar cross" loading="lazy"></div>
-          <div class="card-body">
-            <span class="badge">Coming soon</span>
-            <h3>Café Taza Mug</h3>
-            <p class="price">$24 CAD</p>
-            <p>Small Spanish-style coffee cup with the cross. For your café con leche.</p>
-          </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/hoodie-cross.webp" alt="Black hoodie with crimson Templar cross and gold Camino Brothers lettering" loading="lazy"></div>
-          <div class="card-body">
-            <span class="badge">Coming soon</span>
-            <h3>Templar Cross Hoodie</h3>
-            <p class="price">$62 CAD</p>
-            <p>Crimson cross, gold lettering on black. For cold trail mornings.</p>
-          </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/keychain-cross.webp" alt="Metal keychain with crimson Templar cross medallion" loading="lazy"></div>
-          <div class="card-body">
-            <span class="badge">Coming soon</span>
-            <h3>Cross Keychain</h3>
-            <p class="price">$22 CAD</p>
-            <p>Enamel Templar medallion on steel. Carry the camino with you.</p>
-          </div>
-        </li>
-        <li class="card">
-          <div class="card-photo"><img src="photos/merch/ebook-cover.webp" alt="The Buen Camino, Brother ebook cover - two pilgrims with the bronze pilgrim statue in León, Spain" loading="lazy"></div>
-          <div class="card-body">
-            <span class="badge">Coming soon</span>
-            <h3>Buen Camino, Brother - The Ebook</h3>
-            <p class="price">$11.99 CAD</p>
-            <p>A WhatsApp story - two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019: the jokes, the photos, and the long wait between walks.</p>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
 
-      <nav class="pager" aria-label="Site pages">
-        <a href="camino-9.html">&larr; Camino 9: Coming Soon</a>
-        <a class="pager-next" href="index.html">Home &rarr;</a>
-      </nav>
+      <section class="notify-band" id="notify" aria-label="Get notified">
+        <h2>One list for all of it</h2>
+        <p>Book, app and shirts launch at different times - join Camino Dispatches and we will email you as each one goes live.</p>
+        <p><a class="shop-btn" href="index.html">Join Camino Dispatches</a></p>
+      </section>
     </div>
   </main>
 
