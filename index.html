@@ -72,6 +72,19 @@
 
   <main id="main">
     <div class="wrap">
+      <style>
+        @keyframes ts-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+        @keyframes ts-glow { 0%,100% { box-shadow: 0 0 0 0 rgba(163,127,39,0.55); } 50% { box-shadow: 0 0 0 9px rgba(163,127,39,0); } }
+        .ts-new { animation: ts-pulse 1.8s ease-in-out infinite; }
+        .ts-btn { animation: ts-glow 1.8s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) { .ts-new, .ts-btn { animation: none; } }
+      </style>
+      <div style="background:#1e4634;color:#f6f1e5;border-radius:6px;padding:1rem 1.25rem;margin:0 0 1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem 1.25rem;">
+        <span class="ts-new" style="background:#a37f27;color:#fff8ea;font-weight:700;font-size:0.8rem;letter-spacing:0.08em;padding:0.3rem 0.65rem;border-radius:999px;">NEW</span>
+        <p style="margin:0;flex:1 1 340px;">Our new app is live. <strong>Townstamp</strong> - the travel journal that stamps every entry with the town and the date - is now on the App Store. Free to download.</p>
+        <a class="ts-btn" href="https://apps.apple.com/app/id6827766912" style="background:#a37f27;color:#fff8ea;font-weight:700;text-decoration:none;padding:0.55rem 1.1rem;border-radius:4px;white-space:nowrap;">Get Townstamp</a>
+      </div>
+
       <section class="hero tall home-hero" aria-label="Welcome">
         <img class="hero-photo" src="photos/camino1/camino1-01.jpg" alt="The three Camino Brothers - Dennis and Nicki (Germany) and Mike (Canada) - at the cafe in Portugal where they first met in 2019">
         <div class="hero-text">
