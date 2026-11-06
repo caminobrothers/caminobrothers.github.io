@@ -430,9 +430,13 @@ h1, h2, h3 {
 .card .card-photo img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  object-position: 50% 50%;
   border-bottom: 3px double var(--gold);
 }
+.card .card-photo img[src*="camino2-10"] { object-position: 50% 62%; }
+.card .card-photo img[src*="camino4-23"] { object-position: 50% 30%; }
 .card .price {
   font-family: 'Cinzel', serif;
   font-size: 1.25rem;
