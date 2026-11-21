@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camino Brothers - Eight caminos walked, and counting</title>
   <meta name="description" content="Camino Brothers: the journal of Dennis and Nicki (Germany) and Mike (Canada) - eight pilgrimages across Spain, Portugal, Germany and Austria, with routes, dates, stories and photos from the Camino de Santiago.">
+  <link rel="canonical" href="https://caminobrothers.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Camino Brothers",
+    "url": "https://caminobrothers.com/"
+  }
+  </script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Camino Brothers">
   <meta property="og:title" content="Camino Brothers - Eight caminos walked, and counting">
@@ -17,13 +26,37 @@
   <meta name="twitter:image" content="https://caminobrothers.com/photos/camino1/camino1-01.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Homepage: nav spread full-width inside the banner (desktop), matching the camino-page previews */
+    @media (min-width: 921px) {
+      .header-inner { max-width: none; flex-wrap: wrap; padding-left: 2rem; padding-right: 2rem; }
+      .main-nav { order: 3; flex: 1 1 100%; margin-left: 0; }
+      .main-nav ul { justify-content: space-between; flex-wrap: wrap; row-gap: 0.15rem; }
+      .main-nav a { white-space: nowrap; }
+    }
+    @media (min-width: 921px) and (max-width: 1450px) {
+      .main-nav a { font-size: 0.86rem; }
+    }
+  </style>
+
+  <style>
+    /* Banner: brand centred as a masthead (menu keeps its own full-width row below) */
+    .site-header .brand { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <style>
+    .card .card-link-div { display: block; color: inherit; text-decoration: none; height: 100%; }
+    .card .placeholder { border: 2px dashed var(--gold); border-radius: 3px; color: var(--ink-soft); text-align: center; padding: 1.6rem 1rem; font-style: italic; }
+    .card .card-cta.soon { color: var(--ink-soft); }
+    .blog-more { text-align: center; margin: 0.9rem 0 0; font-weight: 700; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
+  <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html"><svg class="brand-cross" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg><span class="brand-text">CAMINO BROTHERS<small>PILGRIM JOURNAL</small></span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">&#9776;</button>
@@ -45,15 +78,20 @@
       </nav>
     </div>
   </header>
-  <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Porto</span><span>São Pedro de Rates</span><span>Santiago de Compostela</span><span>León</span><span>Finisterre</span><span>Biebrich</span><span>The Lorelei</span><span>Funchal</span><span>Munich</span><span>Innsbruck</span><span>Irun</span><span>Ponferrada</span><span>Lofer</span><span>St. Christoph</span><span>Saint-Jean-Pied-de-Port</span><span>Porto</span><span>São Pedro de Rates</span><span>Santiago de Compostela</span><span>León</span><span>Finisterre</span><span>Biebrich</span><span>The Lorelei</span><span>Funchal</span><span>Munich</span><span>Innsbruck</span><span>Irun</span><span>Ponferrada</span><span>Lofer</span><span>St. Christoph</span><span>Saint-Jean-Pied-de-Port</span></div></div>
-
 
   <main id="main">
     <div class="wrap">
-            <div class="ts-banner">
-        <span class="ts-new">NEW</span>
-        <p>Our new app is live. <strong>Townstamp</strong> - the travel journal that stamps every entry with the town and the date - is now on the App Store. Free to download.</p>
-        <a class="ts-btn" href="https://apps.apple.com/app/id6827766912?ppid=e253ce64-1b45-4a03-9bd2-8c7f7e5dd1bc">Get Townstamp</a>
+      <style>
+        @keyframes ts-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+        @keyframes ts-glow { 0%,100% { box-shadow: 0 0 0 0 rgba(163,127,39,0.55); } 50% { box-shadow: 0 0 0 9px rgba(163,127,39,0); } }
+        .ts-new { animation: ts-pulse 1.8s ease-in-out infinite; }
+        .ts-btn { animation: ts-glow 1.8s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) { .ts-new, .ts-btn { animation: none; } }
+      </style>
+      <div style="background:#1e4634;color:#f6f1e5;border-radius:6px;padding:1rem 1.25rem;margin:0 0 1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem 1.25rem;">
+        <span class="ts-new" style="background:#a37f27;color:#fff8ea;font-weight:700;font-size:0.8rem;letter-spacing:0.08em;padding:0.3rem 0.65rem;border-radius:999px;">NEW</span>
+        <p style="margin:0;flex:1 1 340px;">Our new app is live. <strong>Townstamp</strong> - the travel journal that stamps every entry with the town and the date - is now on the App Store. Free to download.</p>
+        <a class="ts-btn" href="https://apps.apple.com/app/id6827766912?ppid=e253ce64-1b45-4a03-9bd2-8c7f7e5dd1bc" style="background:#a37f27;color:#fff8ea;font-weight:700;text-decoration:none;padding:0.55rem 1.1rem;border-radius:4px;white-space:nowrap;">Get Townstamp</a>
       </div>
 
       <section class="hero tall home-hero" aria-label="Welcome">
@@ -77,23 +115,9 @@
       </p>
       <div class="ornament" aria-hidden="true"><svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg></div>
 
-            <ul class="stats-band" aria-label="Camino Brothers in numbers">
-        <li class="stat"><b>8</b><span>Caminos walked</span></li>
-        <li class="stat"><b>&asymp; 1,877 km</b><span>On foot together</span></li>
-        <li class="stat"><b>3</b><span>Brothers</span></li>
-        <li class="stat"><b>2019</b><span>Walking since</span></li>
-      </ul>
-
-<h2 class="section-title">The Caminos</h2>
-            <div class="chips" role="group" aria-label="Filter caminos by region">
-        <button class="chip" type="button" data-filter="all" aria-pressed="true">All caminos</button>
-        <button class="chip" type="button" data-filter="spain-portugal" aria-pressed="false">Spain &amp; Portugal</button>
-        <button class="chip" type="button" data-filter="germany" aria-pressed="false">Germany</button>
-        <button class="chip" type="button" data-filter="austria" aria-pressed="false">Austria &amp; the Alps</button>
-        <button class="chip" type="button" data-filter="france" aria-pressed="false">France</button>
-      </div>
-<ul class="card-grid">
-        <li class="card" data-region="spain-portugal">
+      <h2 class="section-title">The Caminos</h2>
+      <ul class="card-grid">
+        <li class="card">
           <a class="card-link" href="camino-1.html">
             <div class="card-top">
               <h3>Portuguese (2019)</h3>
@@ -105,7 +129,7 @@
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card" data-region="spain-portugal">
+        <li class="card">
           <a class="card-link" href="camino-2.html">
             <div class="card-top">
               <h3>Francés (2021)</h3>
@@ -117,7 +141,7 @@
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card" data-region="germany">
+        <li class="card">
           <a class="card-link" href="camino-3.html">
             <div class="card-top">
               <h3>Rheinsteig (2022)</h3>
@@ -129,7 +153,7 @@
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card" data-region="spain-portugal">
+        <li class="card">
           <a class="card-link" href="camino-4.html">
             <div class="card-top">
               <h3>Portuguese (2023)</h3>
@@ -141,17 +165,17 @@
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card" data-region="spain-portugal">
+        <li class="card">
           <a class="card-link" href="camino-5.html">
             <div class="card-top">
               <h3>Madeira (2024)</h3>
               <span class="card-sub">May 8 - May 17, 2024</span>
             </div>
-            <div class="card-body"><p><img class="flag" src="photos/flags/pt.png" alt="">Portugal<br>The island week - one base in Funchal, a rental car, and a new levada walk every day. The brothers' first camino that wasn't point to point - on an island barely a 7th the size of Mike's PEI, with twice the people. About 140 km of walking across the week.</p></div>
+            <div class="card-body"><p><img class="flag" src="photos/flags/pt.png" alt="">Portugal<br>The island week - one base in Funchal, a rental car, and a new levada walk every day. The brothers' first camino that wasn't point to point - on an island barely a 7th the size of Mike's PEI, with twice the people.</p></div>
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card" data-region="germany austria">
+        <li class="card">
           <a class="card-link" href="camino-6.html">
             <div class="card-top">
               <h3>Jakobsweg (2024)</h3>
@@ -161,27 +185,27 @@
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card" data-region="spain-portugal">
+        <li class="card">
           <a class="card-link" href="camino-7.html">
             <div class="card-top">
               <h3>Norte / Francés (2025)</h3>
               <span class="card-sub">Jul 10 - Jul 24, 2025</span>
             </div>
-            <div class="card-body"><p><img class="flag" src="photos/flags/es.png" alt="">Spain<br>Two trails, one summer - the Camino del Norte from Irun, then the Franc&eacute;s from Ponferrada to Santiago. Mike and Nicki, with one night in tents along the way - more like glamping, though. About 246 km walked in all.</p></div>
+            <div class="card-body"><p><img class="flag" src="photos/flags/fr.png" alt="">France &middot; <img class="flag" src="photos/flags/es.png" alt="">Spain<br>Two trails, one summer - the Camino del Norte from Irun, then the Franc&eacute;s from Ponferrada to Santiago. Mike and Nicki, with one night in tents along the way - more like glamping, though.</p></div>
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card" data-region="austria germany">
+        <li class="card">
           <a class="card-link" href="camino-8.html">
             <div class="card-top">
               <h3>Tyrol (2026)</h3>
               <span class="card-sub">Jun 5 - Jun 19, 2026</span>
             </div>
-            <div class="card-body"><p><img class="flag" src="photos/flags/at.png" alt="">Austria &middot; <img class="flag" src="photos/flags/it.png" alt="">Italy &middot; <img class="flag" src="photos/flags/de.png" alt="">Germany<br>Lofer to St. Christoph through Tyrol, then trains to Bolzano and Munich - the hardest camino yet, by their own verdict. Dennis joined for the first week, and Mike met Nicki&rsquo;s mother Regina for the first time along the way. About 235 km walked in all.</p></div>
+            <div class="card-body"><p><img class="flag" src="photos/flags/at.png" alt="">Austria &middot; <img class="flag" src="photos/flags/it.png" alt="">Italy &middot; <img class="flag" src="photos/flags/de.png" alt="">Germany<br>Lofer to St. Christoph through Tyrol, then trains to Bolzano and Munich - the hardest camino yet, by their own verdict. Dennis joined for the first week, and Mike met Nicki&rsquo;s mother Regina for the first time along the way.</p></div>
             <span class="card-cta">View Camino &rarr;</span>
           </a>
         </li>
-        <li class="card coming-soon" data-region="france spain-portugal">
+        <li class="card coming-soon">
           <a class="card-link" href="camino-9.html">
             <div class="card-top">
               <h3>Coming Soon</h3>
@@ -191,7 +215,6 @@
               <p><span class="badge">Next adventure</span></p>
               <p><img class="flag" src="photos/flags/fr.png" alt="">France &middot; <img class="flag" src="photos/flags/es.png" alt="">Spain<br>The ninth Camino Brothers hike: the Camino Francés - about 465 km from Saint-Jean-Pied-de-Port to León, three weeks on the classic pilgrim road.</p>
             </div>
-            <p class="count-chip"><b data-c9-days>&hellip;</b> days to go</p>
             <span class="card-cta">See what's next &rarr;</span>
           </a>
         </li>
@@ -201,8 +224,8 @@
 
 <section class="shop-promo" aria-label="Shop">
         <svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg>
-        <h2>Buen Camino, Brother</h2>
-        <p>Our book - a WhatsApp story: two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019 - is coming to Amazon in December. $11.99 CAD &middot; $9.99 USD &middot; &euro;8.99.</p>
+        <h2>Wear the Camino</h2>
+        <p>Templar tees, embroidered caps, café mugs and more - take a first look at the coming collection.</p>
         <a class="btn" href="shop.html">Visit the Shop</a>
       </section>
     </div>
@@ -227,28 +250,6 @@
   </footer>
 
   <script src="gallery.js?v=2"></script>
-  <script>
-    (function () {
-      var chips = document.querySelectorAll(".chip[data-filter]");
-      var cards = document.querySelectorAll(".card-grid .card[data-region]");
-      chips.forEach(function (chip) {
-        chip.addEventListener("click", function () {
-          var f = chip.getAttribute("data-filter");
-          chips.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
-          cards.forEach(function (card) {
-            var show = f === "all" || (card.getAttribute("data-region") || "").split(" ").indexOf(f) !== -1;
-            card.hidden = !show;
-          });
-        });
-      });
-      var daysEl = document.querySelector("[data-c9-days]");
-      if (daysEl) {
-        var start = new Date("2027-09-28T08:00:00+02:00").getTime();
-        var d = Math.ceil((start - Date.now()) / 86400000);
-        daysEl.textContent = d > 0 ? d : 0;
-      }
-    })();
-  </script>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "958cffad5d494302aedb4e0f008eed99"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
