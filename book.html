@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buen Camino, Brother - The Book - Camino Brothers</title>
+  <meta name="description" content="Buen Camino, Brother - the Camino Brothers book. A WhatsApp story: two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019. Coming to Amazon Kindle in December 2026.">
+  <link rel="canonical" href="https://caminobrothers.com/book.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Camino Brothers">
+  <meta property="og:title" content="Buen Camino, Brother - The Book - Camino Brothers">
+  <meta property="og:description" content="Buen Camino, Brother - the Camino Brothers book. A WhatsApp story: two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019. Coming to Amazon Kindle in December 2026.">
+  <meta property="og:url" content="https://caminobrothers.com/book.html">
+  <meta property="og:image" content="https://caminobrothers.com/photos/book-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Buen Camino, Brother - The Book - Camino Brothers">
+  <meta name="twitter:description" content="Buen Camino, Brother - the Camino Brothers book. A WhatsApp story: two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019. Coming to Amazon Kindle in December 2026.">
+  <meta name="twitter:image" content="https://caminobrothers.com/photos/book-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Book page layout - built from the site's own palette and patterns */
+    .book-hero {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 2.2rem;
+      align-items: center;
+      margin: 2.4rem 0 0.5rem;
+    }
+    .book-cover {
+      margin: 0;
+      background: var(--cream);
+      border: 1px solid var(--gold);
+      padding: 8px;
+      border-radius: 4px;
+      box-shadow: 3px 3px 0 var(--shadow);
+    }
+    .book-cover img { display: block; width: 100%; height: auto; border-radius: 2px; }
+    .book-hero .eyebrow { color: var(--crimson); margin: 0 0 0.5rem; }
+    .book-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 0.6rem;
+      letter-spacing: 0.04em;
+    }
+    .book-subtitle {
+      font-size: 1.18rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0 0 0.9rem;
+    }
+    .book-byline { font-weight: 700; letter-spacing: 0.03em; margin: 0 0 1.1rem; }
+    .book-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      background: var(--crimson);
+      color: #fff;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      padding: 0.3rem 0.8rem;
+    }
+    .photo-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin: 1.5rem 0 0;
+    }
+    .photo-row figure {
+      margin: 0;
+      background: var(--cream);
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      padding: 6px;
+      box-shadow: 2px 2px 0 var(--shadow);
+    }
+    .photo-row img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+    .photo-row figcaption {
+      text-align: center;
+      font-size: 0.92rem;
+      font-style: italic;
+      padding: 0.55rem 0.25rem 0.35rem;
+      color: var(--ink-soft);
+    }
+    .prologue-teaser {
+      margin: 2.5rem 0 0;
+      background: var(--cream);
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      padding: 1.6rem 1.8rem 1.8rem;
+      box-shadow: 3px 3px 0 var(--shadow);
+    }
+    .prologue-teaser .section-title { margin-top: 0; }
+    .prologue-teaser p { margin: 0 0 1rem; }
+    .teaser-cta { text-align: center; margin-top: 1.4rem; }
+    .read-btn {
+      display: inline-block;
+      font-family: "Cinzel", Georgia, serif;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      background: var(--crimson);
+      color: #fff;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      padding: 0.7rem 1.6rem;
+      text-decoration: none;
+    }
+    .release-panel {
+      margin: 2.5rem 0 0;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      background: linear-gradient(to bottom, var(--iron-soft), var(--iron));
+      color: var(--cream);
+      text-align: center;
+      padding: 2.2rem 1.5rem;
+      box-shadow: 3px 3px 0 var(--shadow);
+    }
+    .release-panel .cross-pattee {
+      width: 44px;
+      height: 44px;
+      fill: var(--crimson);
+      stroke: var(--gold);
+      stroke-width: 3;
+      margin-bottom: 0.6rem;
+    }
+    .release-panel h2 { color: var(--gold-light); margin: 0 0 0.5rem; letter-spacing: 0.08em; }
+    .release-panel p { margin: 0 auto 1rem; max-width: 36rem; }
+    .release-panel p:last-child { margin-bottom: 0; }
+    .release-panel .price-line {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin: 0 auto 1rem;
+    }
+    @media (max-width: 760px) {
+      .book-hero { grid-template-columns: 1fr; text-align: center; }
+      .book-cover { max-width: 280px; margin: 0 auto; }
+      .photo-row { grid-template-columns: 1fr; }
+      .photo-row img { height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><svg class="brand-cross" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg><span class="brand-text">CAMINO BROTHERS<small>PILGRIM JOURNAL</small></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">&#9776;</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="camino-1.html">Portuguese (2019)</a></li>
+          <li><a href="camino-2.html">Francés (2021)</a></li>
+          <li><a href="camino-3.html">Rheinsteig (2022)</a></li>
+          <li><a href="camino-4.html">Portuguese (2023)</a></li>
+          <li><a href="camino-5.html">Madeira (2024)</a></li>
+          <li><a href="camino-6.html">Jakobsweg (2024)</a></li>
+          <li><a href="camino-7.html">Norte / Francés (2025)</a></li>
+          <li><a href="camino-8.html">Tyrol (2026)</a></li>
+          <li><a href="camino-9.html">Coming Soon (2027)</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+
+      <section class="book-hero" aria-label="The book">
+        <figure class="book-cover">
+          <img src="photos/book-cover.png" alt="Buen Camino, Brother book cover - two pilgrims with the bronze pilgrim statue in León">
+        </figure>
+        <div class="book-hero-text">
+          <p class="eyebrow">The Camino Brothers Book</p>
+          <h1>Buen Camino, Brother</h1>
+          <p class="book-subtitle">A WhatsApp Story - Two pilgrims, eight caminos, and a daily chat between Canada and Germany since 2019</p>
+          <p class="book-byline">by Michael Redmond, with Nicki Kuhle</p>
+          <span class="book-badge">Coming to Amazon Kindle - December 2026</span>
+        </div>
+      </section>
+
+      <div class="ornament" aria-hidden="true"><svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg></div>
+
+      <h2 class="section-title">How It Started</h2>
+      <div class="story">
+        <p>On Monday, September 30, 2019, Mike Redmond of Prince Edward Island, Canada sat down to supper at Macedo's Bar in São Pedro de Rates, a small village on the Portuguese Way. Nicki Kuhle of Hessen, Germany was at the table, with his brother Dennis. Mike and Nicki had never met before that night.</p>
+        <p>They walked on to Santiago together. The chat between Mike and Nicki started on October 2, 2019, and it never stopped - not between caminos, and not since. This book is that chat.</p>
+      </div>
+
+      <h2 class="section-title">By the Numbers</h2>
+      <ul class="facts">
+        <li><span class="fact-label">Messages</span><span class="fact-value">19,380</span></li>
+        <li><span class="fact-label">Caminos</span><span class="fact-value">8</span></li>
+        <li><span class="fact-label">Trail Walked</span><span class="fact-value">About 1,877 km</span></li>
+        <li><span class="fact-label">Days of Hiking</span><span class="fact-value">82</span></li>
+        <li><span class="fact-label">Daily Chat</span><span class="fact-value">7 Years</span></li>
+      </ul>
+
+      <h2 class="section-title">About the Book</h2>
+      <div class="story">
+        <p>Buen Camino, Brother is not a guidebook. It is a real WhatsApp chat, printed the way it happened.</p>
+        <p>In September 2019, Mike Redmond of Prince Edward Island, Canada met Nicki Kuhle, of Hessen, Germany, and his brother Dennis over supper in São Pedro de Rates, a small village on the Portuguese Way. They walked to Santiago together, and then they just kept going. Eight caminos in seven years: the Portuguese Way twice, the French Way, the Rheinsteig, Madeira, the Jakobsweg, the Norte and the Francés, and the Tyrol. About 1,877 kilometres of trail and 82 days of walking. Dennis walked with them on most of them.</p>
+        <p>Between the walks, the chat never stopped. It was always just the two of us in it, me and Nicki - Dennis walked with us on the caminos, but he was never part of the chat. This book is that chat - thousands of messages and the photos that went with them, from October 2019 to October 2026. The planning, the prices, the weather, the jokes, the hard days, and everything else that happens in two men's lives over seven years.</p>
+        <p>Nothing in it was written for an audience. It is a hiking story, and it is also a story of friendship.</p>
+        <p>If you have walked a Camino, are planning one, or just like a true story told the way it happened, this book is for you.</p>
+      </div>
+
+      <div class="photo-row">
+        <figure>
+          <img src="photos/camino1/camino1-01.jpg" alt="Three pilgrims at supper in São Pedro de Rates" loading="lazy">
+          <figcaption>Supper in São Pedro de Rates - the night it started</figcaption>
+        </figure>
+        <figure>
+          <img src="photos/camino1/camino1-10.jpg" alt="The long shadows of three pilgrims on the road" loading="lazy">
+          <figcaption>Long shadows on the road to Santiago</figcaption>
+        </figure>
+        <figure>
+          <img src="photos/camino1/camino1-22.jpg" alt="Four pilgrims in the cathedral square in Santiago, one making a heart with his hands" loading="lazy">
+          <figcaption>The cathedral square in Santiago, October 2019</figcaption>
+        </figure>
+      </div>
+
+      <section class="prologue-teaser" aria-label="From the prologue">
+        <h2 class="section-title">From the Prologue</h2>
+        <p>In late September 2019, I arrived in Porto to walk the Portuguese Camino to Santiago de Compostela. It was my fourth camino, and I set out on my own, the way I had before. But setting out alone had never meant walking alone. My first camino took me along the first five hundred kilometres of the French Way, as far as León, and it filled up with friends from many countries. That fall I went back and walked the rest of it, starting again at León: the first days with friends from the spring, new ones the rest of the way. I finished as a guest in the home of Russell and Eileen, friends I met and walked with on both trips, on Spain's east coast. They kept me for days and treated me like royalty. My third trip I did not set out alone at all. My daughters Sarah and Katie walked with me: two weeks of the French Way, from Saint-Jean-Pied-de-Port to Burgos, then a week in Portugal as tourists instead of pilgrims. They came home with the same love of Europe I had caught myself.</p>
+        <p>I met, walked with, and became friends with dozens of people over the first three caminos. Friends who, if I saw them again in 20 years, it would be hugs and reminiscing. Those friends aren't named in this book, but you know who you are. You were an important part of my journey.</p>
+        <p>So I knew how the Camino worked. I set out alone and people show up. I expected the Portuguese Way to do the same: new friends for two weeks, goodbyes at Santiago, and then back home. What I did not expect was that the new friends would become lifelong friends, walking camino after camino, year after year.</p>
+        <div class="teaser-cta">
+          <a class="read-btn" href="prologue.html">Read the Prologue</a>
+        </div>
+      </section>
+
+      <section class="release-panel" aria-label="Release details">
+        <svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg>
+        <h2>Coming to Amazon Kindle</h2>
+        <p>Buen Camino, Brother arrives on Amazon Kindle in December 2026.</p>
+        <p class="price-line">$11.99 CAD &middot; $9.99 USD &middot; &euro;8.99</p>
+        <p>The full prologue is free to read right here on caminobrothers.com - no purchase needed.</p>
+        <p>Want to know the day it lands? Join Camino Dispatches below - one email when there is news.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <section class="dispatches" aria-label="Email signup">
+    <p class="dispatches-kicker">&middot; EST. 2019 &middot; PORTO TO SANTIAGO &middot;</p>
+    <h2>CAMINO DISPATCHES</h2>
+    <p class="dispatches-copy">Book news, Camino 9 updates, and the occasional word from the road - straight to your inbox.</p>
+    <div class="dispatches-form">
+      <script async src="https://eocampaign1.com/form/35974eca-cce6-11f1-93bb-419b81d8df76.js" data-form="35974eca-cce6-11f1-93bb-419b81d8df76"></script>
+    </div>
+    <p class="dispatches-small">One email when there&rsquo;s news - no spam, unsubscribe anytime.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p class="footer-brand">CAMINO BROTHERS</p>
+    <p>Buen camino - eight walked, and counting.</p>
+    <p><a href="mailto:mike@caminobrothers.com" style="color:#e8dcc0; text-decoration: underline;">mike@caminobrothers.com</a></p>
+    <p><a href="https://www.instagram.com/thecaminobrothers/" style="color:#e8dcc0; text-decoration: underline;">Follow us on Instagram - @thecaminobrothers</a></p>
+    <p>&copy; 2026 Camino Brothers. All rights reserved.</p>
+  </footer>
+
+  <script src="gallery.js?v=2"></script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "958cffad5d494302aedb4e0f008eed99"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
