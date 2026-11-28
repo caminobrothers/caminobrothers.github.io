@@ -50,16 +50,16 @@
     .card .card-link-div { display: block; color: inherit; text-decoration: none; height: 100%; }
     .card .placeholder { border: 2px dashed var(--gold); border-radius: 3px; color: var(--ink-soft); text-align: center; padding: 1.6rem 1rem; font-style: italic; }
     .card .card-cta.soon { color: var(--ink-soft); }
-    .book-hero-banner { background: linear-gradient(to bottom, #256b4a, #1e4634); border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); margin: 0 0 1.25rem; }
-    .book-hero-banner .bhb-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; max-width: 1060px; margin: 0 auto; padding: 1.4rem 1.25rem; }
-    .book-hero-banner .bhb-cover { width: 130px; height: auto; border: 1px solid var(--gold); box-shadow: 0 6px 14px rgba(0,0,0,.5); }
+    .book-hero-banner { background: linear-gradient(to bottom, #a31621, #7c1019); border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); margin: 0 0 1.25rem; }
+    .book-hero-banner .bhb-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; max-width: 1060px; margin: 0 auto; padding: 0.85rem 1.25rem; }
+    .book-hero-banner .bhb-cover { width: 102px; height: auto; border: 1px solid var(--gold); box-shadow: 0 6px 14px rgba(0,0,0,.5); }
     .book-hero-banner .bhb-text { flex: 1 1 260px; }
     .book-hero-banner .bhb-kicker { color: var(--gold-light); font-weight: 700; letter-spacing: 0.18em; font-size: 0.78rem; margin: 0 0 0.3rem; }
     .book-hero-banner .bhb-title { color: var(--gold-light); font-size: 1.65rem; letter-spacing: 0.05em; margin: 0 0 0.4rem; text-transform: uppercase; }
     .book-hero-banner .bhb-sub { color: var(--cream); font-style: italic; margin: 0 0 0.5rem; }
-    .book-hero-banner .bhb-price { color: var(--gold-light); font-weight: 700; margin: 0 0 0.9rem; }
+    .book-hero-banner .bhb-price { color: var(--gold-light); font-weight: 700; margin: 0 0 0.55rem; }
     .book-hero-banner .bhb-btns { margin: 0; }
-    .book-hero-banner .bhb-btn { display: inline-block; font-family: "Cinzel", Georgia, serif; font-weight: 700; letter-spacing: 0.06em; background: linear-gradient(180deg, #b98e3e 0%, #8f6a26 52%, #6e5018 100%); color: #fdf3d0; border: 1px solid #54400f; border-radius: 999px; box-shadow: inset 0 1px 0 rgba(255,240,190,.55), inset 0 -3px 6px rgba(40,28,2,.5), 0 5px 12px rgba(30,26,22,.4); text-shadow: 0 1px 2px rgba(30,20,0,.6); padding: 0.7rem 1.7rem; text-decoration: none; margin: 0 0.5rem 0.4rem 0; }
+    .book-hero-banner .bhb-btn { display: inline-block; font-family: "Cinzel", Georgia, serif; font-weight: 700; letter-spacing: 0.06em; background: linear-gradient(180deg, #b98e3e 0%, #8f6a26 52%, #6e5018 100%); color: #fdf3d0; border: 1px solid #54400f; border-radius: 999px; box-shadow: inset 0 1px 0 rgba(255,240,190,.55), inset 0 -3px 6px rgba(40,28,2,.5), 0 5px 12px rgba(30,26,22,.4); text-shadow: 0 1px 2px rgba(30,20,0,.6); padding: 0.55rem 1.7rem; text-decoration: none; margin: 0 0.5rem 0.4rem 0; }
     .book-hero-banner .bhb-btn:hover { filter: brightness(1.1); }
     .blog-more { text-align: center; margin: 0.9rem 0 0; font-weight: 700; }
   </style>
@@ -104,17 +104,10 @@
       </div>
     </section>
     <div class="wrap">
-      <style>
-        @keyframes ts-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
-        @keyframes ts-glow { 0%,100% { box-shadow: 0 0 0 0 rgba(163,127,39,0.55); } 50% { box-shadow: 0 0 0 9px rgba(163,127,39,0); } }
-        .ts-new { animation: ts-pulse 1.8s ease-in-out infinite; }
-        .ts-btn { animation: ts-glow 1.8s ease-in-out infinite; }
-        @media (prefers-reduced-motion: reduce) { .ts-new, .ts-btn { animation: none; } }
-      </style>
-      <div style="background:#1e4634;color:#f6f1e5;border-radius:6px;padding:1rem 1.25rem;margin:0 0 1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem 1.25rem;">
-        <span class="ts-new" style="background:#a37f27;color:#fff8ea;font-weight:700;font-size:0.8rem;letter-spacing:0.08em;padding:0.3rem 0.65rem;border-radius:999px;">NEW</span>
+      <div style="background:linear-gradient(to right,#2e2822,#1e1a16);color:#f6f1e5;border-radius:6px;padding:1rem 1.25rem;margin:0 0 1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem 1.25rem;">
+        <span style="background:#a37f27;color:#fff8ea;font-weight:700;font-size:0.8rem;letter-spacing:0.08em;padding:0.3rem 0.65rem;border-radius:999px;">NEW</span>
         <p style="margin:0;flex:1 1 340px;">Our new app is live. <strong>Townstamp</strong> - the travel journal that stamps every entry with the town and the date - is now on the App Store. Free to download.</p>
-        <a class="ts-btn" href="https://apps.apple.com/app/id6827766912?ppid=e253ce64-1b45-4a03-9bd2-8c7f7e5dd1bc" style="background:linear-gradient(180deg, #b98e3e 0%, #8f6a26 52%, #6e5018 100%);color:#fdf3d0;font-weight:700;text-decoration:none;padding:0.6rem 1.4rem;border:1px solid #54400f;border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,240,190,.55), inset 0 -3px 6px rgba(40,28,2,.5), 0 5px 12px rgba(30,26,22,.4);text-shadow:0 1px 2px rgba(30,20,0,.6);white-space:nowrap;">Get Townstamp</a>
+        <a href="https://apps.apple.com/app/id6827766912?ppid=e253ce64-1b45-4a03-9bd2-8c7f7e5dd1bc" style="display:inline-block;font-family:'Cinzel',Georgia,serif;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:linear-gradient(180deg, #b98e3e 0%, #8f6a26 52%, #6e5018 100%);color:#fdf3d0;border:1px solid #54400f;border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,240,190,.55), inset 0 -3px 6px rgba(40,28,2,.5), 0 5px 12px rgba(30,26,22,.4);text-shadow:0 1px 2px rgba(30,20,0,.6);padding:0.55rem 1.7rem;text-decoration:none;white-space:nowrap;">Get Townstamp</a>
       </div>
 
       <section class="hero tall home-hero" aria-label="Welcome">
@@ -245,12 +238,6 @@
 
 
 
-<section class="shop-promo" aria-label="Shop">
-        <svg class="cross-pattee" viewBox="0 0 100 100" focusable="false" aria-hidden="true"><path d="M35 6 65 6 60 40 94 35 94 65 60 60 65 94 35 94 40 60 6 65 6 35 40 40Z"/></svg>
-        <h2>Wear the Camino</h2>
-        <p>Templar tees, embroidered caps, café mugs and more - take a first look at the coming collection.</p>
-        <a class="btn" href="shop.html">Visit the Shop</a>
-      </section>
     </div>
   </main>
 

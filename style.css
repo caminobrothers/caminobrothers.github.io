@@ -781,3 +781,6 @@ h1, h2, h3 {
 .dispatches-form input[type="submit"]:hover { filter: brightness(1.1); }
 .dispatches-form .emailoctopus-success-message { color: var(--gold-light); }
 .dispatches-form .emailoctopus-error-message { color: #e88a8a; }
+/* EmailOctopus "Powered by" credit - its own colours (dark purple #3c2668 / #6e54d7) wash out on the dark panel */
+.dispatches .dispatches-form .mastfoot p { color: #cbb98f !important; font-size: 0.78rem !important; }
+.dispatches .dispatches-form .mastfoot a { color: var(--gold-light) !important; }
